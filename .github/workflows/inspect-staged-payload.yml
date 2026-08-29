@@ -1,0 +1,48 @@
+name: Inspect Staged Payload
+
+on:
+  push:
+    branches: [feat/public-v0.1.0]
+    paths: [".github/workflows/inspect-staged-payload.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - name: Inspect payload transport
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import base64, hashlib, io, tarfile
+
+          parts = sorted(Path('.bootstrap').glob('part-*.txt'))
+          print('parts:', [(p.name, p.stat().st_size) for p in parts])
+          encoded = ''.join(p.read_text(encoding='ascii').strip() for p in parts)
+          print('encoded_length:', len(encoded))
+          print('encoded_tail:', encoded[-24:])
+          print('encoded_sha256:', hashlib.sha256(encoded.encode('ascii')).hexdigest())
+          try:
+              payload = base64.b64decode(encoded, validate=True)
+              print('base64: PASS')
+              print('payload_bytes:', len(payload))
+              print('payload_sha256:', hashlib.sha256(payload).hexdigest())
+          except Exception as exc:
+              print('base64: FAIL', type(exc).__name__, str(exc))
+              raise SystemExit(0)
+          try:
+              with tarfile.open(fileobj=io.BytesIO(payload), mode='r:*') as archive:
+                  members = archive.getmembers()
+                  print('tar: PASS')
+                  print('member_count:', len(members))
+                  print('first_members:', [m.name for m in members[:12]])
+                  print('last_members:', [m.name for m in members[-12:]])
+          except Exception as exc:
+              print('tar: FAIL', type(exc).__name__, str(exc))
+          PY
