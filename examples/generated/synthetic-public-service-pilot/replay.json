@@ -1,0 +1,873 @@
+{
+  "case_id": "synthetic-public-service-pilot",
+  "claim_boundary": "This replay reconstructs the stated synthetic decision rule using information in the frozen snapshot. It does not prove the selected option was objectively best or suitable for a real decision.",
+  "cutoff": "2026-05-31T17:00:00Z",
+  "options": [
+    {
+      "base_score": 76.228,
+      "criterion_details": {
+        "base": {
+          "affordability": {
+            "adjusted": 64.94,
+            "confidence": 0.83,
+            "raw": 68.0,
+            "weighted": 9.741
+          },
+          "evidence": {
+            "adjusted": 79.88,
+            "confidence": 0.83,
+            "raw": 86.0,
+            "weighted": 11.982
+          },
+          "fairness": {
+            "adjusted": 76.56,
+            "confidence": 0.83,
+            "raw": 82.0,
+            "weighted": 7.656
+          },
+          "resilience": {
+            "adjusted": 78.22,
+            "confidence": 0.83,
+            "raw": 84.0,
+            "weighted": 15.644
+          },
+          "reversibility": {
+            "adjusted": 83.2,
+            "confidence": 0.83,
+            "raw": 90.0,
+            "weighted": 12.48
+          },
+          "value": {
+            "adjusted": 74.9,
+            "confidence": 0.83,
+            "raw": 80.0,
+            "weighted": 18.725
+          }
+        },
+        "disruption": {
+          "affordability": {
+            "adjusted": 50.0,
+            "confidence": 0.83,
+            "raw": 50.0,
+            "weighted": 7.5
+          },
+          "evidence": {
+            "adjusted": 76.56,
+            "confidence": 0.83,
+            "raw": 82.0,
+            "weighted": 11.484
+          },
+          "fairness": {
+            "adjusted": 64.94,
+            "confidence": 0.83,
+            "raw": 68.0,
+            "weighted": 6.494
+          },
+          "resilience": {
+            "adjusted": 66.6,
+            "confidence": 0.83,
+            "raw": 70.0,
+            "weighted": 13.32
+          },
+          "reversibility": {
+            "adjusted": 83.2,
+            "confidence": 0.83,
+            "raw": 90.0,
+            "weighted": 12.48
+          },
+          "value": {
+            "adjusted": 56.64,
+            "confidence": 0.83,
+            "raw": 58.0,
+            "weighted": 14.16
+          }
+        },
+        "downside": {
+          "affordability": {
+            "adjusted": 56.64,
+            "confidence": 0.83,
+            "raw": 58.0,
+            "weighted": 8.496
+          },
+          "evidence": {
+            "adjusted": 81.54,
+            "confidence": 0.83,
+            "raw": 88.0,
+            "weighted": 12.231
+          },
+          "fairness": {
+            "adjusted": 71.58,
+            "confidence": 0.83,
+            "raw": 76.0,
+            "weighted": 7.158
+          },
+          "resilience": {
+            "adjusted": 73.24,
+            "confidence": 0.83,
+            "raw": 78.0,
+            "weighted": 14.648
+          },
+          "reversibility": {
+            "adjusted": 84.86,
+            "confidence": 0.83,
+            "raw": 92.0,
+            "weighted": 12.729
+          },
+          "value": {
+            "adjusted": 64.94,
+            "confidence": 0.83,
+            "raw": 68.0,
+            "weighted": 16.235
+          }
+        },
+        "upside": {
+          "affordability": {
+            "adjusted": 68.26,
+            "confidence": 0.83,
+            "raw": 72.0,
+            "weighted": 10.239
+          },
+          "evidence": {
+            "adjusted": 78.22,
+            "confidence": 0.83,
+            "raw": 84.0,
+            "weighted": 11.733
+          },
+          "fairness": {
+            "adjusted": 79.88,
+            "confidence": 0.83,
+            "raw": 86.0,
+            "weighted": 7.988
+          },
+          "resilience": {
+            "adjusted": 79.88,
+            "confidence": 0.83,
+            "raw": 86.0,
+            "weighted": 15.976
+          },
+          "reversibility": {
+            "adjusted": 83.2,
+            "confidence": 0.83,
+            "raw": 90.0,
+            "weighted": 12.48
+          },
+          "value": {
+            "adjusted": 81.54,
+            "confidence": 0.83,
+            "raw": 88.0,
+            "weighted": 20.385
+          }
+        }
+      },
+      "decision_state": "eligible",
+      "eligible": true,
+      "expected_score": 74.4809,
+      "external_action": false,
+      "failed_gates": [],
+      "max_regret": 0.511,
+      "minimum_distributional_score": 72.0,
+      "option_id": "opt-bounded-pilot",
+      "required_gates": {
+        "budget": "pass",
+        "legal": "pass",
+        "privacy": "pass",
+        "safety": "pass"
+      },
+      "reversible": true,
+      "robust_score": 76.3208,
+      "scenario_regret": {
+        "base": 0.0,
+        "disruption": 0.511,
+        "downside": 0.0,
+        "upside": -0.0
+      },
+      "scenario_scores": {
+        "base": 76.228,
+        "disruption": 65.438,
+        "downside": 71.497,
+        "upside": 78.801
+      },
+      "title": "Run an assistance-only bounded pilot",
+      "unknown_gates": [],
+      "worst_score": 65.438
+    },
+    {
+      "base_score": 50.035,
+      "criterion_details": {
+        "base": {
+          "affordability": {
+            "adjusted": 67.5,
+            "confidence": 0.7,
+            "raw": 75.0,
+            "weighted": 10.125
+          },
+          "evidence": {
+            "adjusted": 36.0,
+            "confidence": 0.7,
+            "raw": 30.0,
+            "weighted": 5.4
+          },
+          "fairness": {
+            "adjusted": 34.6,
+            "confidence": 0.7,
+            "raw": 28.0,
+            "weighted": 3.46
+          },
+          "resilience": {
+            "adjusted": 39.5,
+            "confidence": 0.7,
+            "raw": 35.0,
+            "weighted": 7.9
+          },
+          "reversibility": {
+            "adjusted": 22.0,
+            "confidence": 0.7,
+            "raw": 10.0,
+            "weighted": 3.3
+          },
+          "value": {
+            "adjusted": 79.4,
+            "confidence": 0.7,
+            "raw": 92.0,
+            "weighted": 19.85
+          }
+        },
+        "disruption": {
+          "affordability": {
+            "adjusted": 27.6,
+            "confidence": 0.7,
+            "raw": 18.0,
+            "weighted": 4.14
+          },
+          "evidence": {
+            "adjusted": 27.6,
+            "confidence": 0.7,
+            "raw": 18.0,
+            "weighted": 4.14
+          },
+          "fairness": {
+            "adjusted": 20.6,
+            "confidence": 0.7,
+            "raw": 8.0,
+            "weighted": 2.06
+          },
+          "resilience": {
+            "adjusted": 20.6,
+            "confidence": 0.7,
+            "raw": 8.0,
+            "weighted": 4.12
+          },
+          "reversibility": {
+            "adjusted": 17.1,
+            "confidence": 0.7,
+            "raw": 3.0,
+            "weighted": 2.565
+          },
+          "value": {
+            "adjusted": 30.4,
+            "confidence": 0.7,
+            "raw": 22.0,
+            "weighted": 7.6
+          }
+        },
+        "downside": {
+          "affordability": {
+            "adjusted": 36.0,
+            "confidence": 0.7,
+            "raw": 30.0,
+            "weighted": 5.4
+          },
+          "evidence": {
+            "adjusted": 30.4,
+            "confidence": 0.7,
+            "raw": 22.0,
+            "weighted": 4.56
+          },
+          "fairness": {
+            "adjusted": 23.4,
+            "confidence": 0.7,
+            "raw": 12.0,
+            "weighted": 2.34
+          },
+          "resilience": {
+            "adjusted": 25.5,
+            "confidence": 0.7,
+            "raw": 15.0,
+            "weighted": 5.1
+          },
+          "reversibility": {
+            "adjusted": 18.5,
+            "confidence": 0.7,
+            "raw": 5.0,
+            "weighted": 2.775
+          },
+          "value": {
+            "adjusted": 46.5,
+            "confidence": 0.7,
+            "raw": 45.0,
+            "weighted": 11.625
+          }
+        },
+        "upside": {
+          "affordability": {
+            "adjusted": 71.0,
+            "confidence": 0.7,
+            "raw": 80.0,
+            "weighted": 10.65
+          },
+          "evidence": {
+            "adjusted": 37.4,
+            "confidence": 0.7,
+            "raw": 32.0,
+            "weighted": 5.61
+          },
+          "fairness": {
+            "adjusted": 38.8,
+            "confidence": 0.7,
+            "raw": 34.0,
+            "weighted": 3.88
+          },
+          "resilience": {
+            "adjusted": 44.4,
+            "confidence": 0.7,
+            "raw": 42.0,
+            "weighted": 8.88
+          },
+          "reversibility": {
+            "adjusted": 20.6,
+            "confidence": 0.7,
+            "raw": 8.0,
+            "weighted": 3.09
+          },
+          "value": {
+            "adjusted": 82.2,
+            "confidence": 0.7,
+            "raw": 96.0,
+            "weighted": 20.55
+          }
+        }
+      },
+      "decision_state": "ineligible",
+      "eligible": false,
+      "expected_score": 43.4603,
+      "external_action": true,
+      "failed_gates": [
+        "distributional-floor",
+        "legal",
+        "privacy",
+        "safety"
+      ],
+      "max_regret": 41.324,
+      "minimum_distributional_score": 12.0,
+      "option_id": "opt-full-rollout",
+      "required_gates": {
+        "budget": "pass",
+        "legal": "fail",
+        "privacy": "fail",
+        "safety": "fail"
+      },
+      "reversible": false,
+      "robust_score": 42.3488,
+      "scenario_regret": {
+        "base": 26.193,
+        "disruption": 41.324,
+        "downside": 39.697,
+        "upside": 26.141
+      },
+      "scenario_scores": {
+        "base": 50.035,
+        "disruption": 24.625,
+        "downside": 31.8,
+        "upside": 52.66
+      },
+      "title": "Automate final service decisions",
+      "unknown_gates": [],
+      "worst_score": 24.625
+    },
+    {
+      "base_score": 65.949,
+      "criterion_details": {
+        "base": {
+          "affordability": {
+            "adjusted": 76.24,
+            "confidence": 0.82,
+            "raw": 82.0,
+            "weighted": 11.436
+          },
+          "evidence": {
+            "adjusted": 81.16,
+            "confidence": 0.82,
+            "raw": 88.0,
+            "weighted": 12.174
+          },
+          "fairness": {
+            "adjusted": 51.64,
+            "confidence": 0.82,
+            "raw": 52.0,
+            "weighted": 5.164
+          },
+          "resilience": {
+            "adjusted": 66.4,
+            "confidence": 0.82,
+            "raw": 70.0,
+            "weighted": 13.28
+          },
+          "reversibility": {
+            "adjusted": 86.9,
+            "confidence": 0.82,
+            "raw": 95.0,
+            "weighted": 13.035
+          },
+          "value": {
+            "adjusted": 43.44,
+            "confidence": 0.82,
+            "raw": 42.0,
+            "weighted": 10.86
+          }
+        },
+        "disruption": {
+          "affordability": {
+            "adjusted": 77.88,
+            "confidence": 0.82,
+            "raw": 84.0,
+            "weighted": 11.682
+          },
+          "evidence": {
+            "adjusted": 81.16,
+            "confidence": 0.82,
+            "raw": 88.0,
+            "weighted": 12.174
+          },
+          "fairness": {
+            "adjusted": 50.0,
+            "confidence": 0.82,
+            "raw": 50.0,
+            "weighted": 5.0
+          },
+          "resilience": {
+            "adjusted": 68.04,
+            "confidence": 0.82,
+            "raw": 72.0,
+            "weighted": 13.608
+          },
+          "reversibility": {
+            "adjusted": 86.9,
+            "confidence": 0.82,
+            "raw": 95.0,
+            "weighted": 13.035
+          },
+          "value": {
+            "adjusted": 41.8,
+            "confidence": 0.82,
+            "raw": 40.0,
+            "weighted": 10.45
+          }
+        },
+        "downside": {
+          "affordability": {
+            "adjusted": 78.7,
+            "confidence": 0.82,
+            "raw": 85.0,
+            "weighted": 11.805
+          },
+          "evidence": {
+            "adjusted": 82.8,
+            "confidence": 0.82,
+            "raw": 90.0,
+            "weighted": 12.42
+          },
+          "fairness": {
+            "adjusted": 54.92,
+            "confidence": 0.82,
+            "raw": 56.0,
+            "weighted": 5.492
+          },
+          "resilience": {
+            "adjusted": 71.32,
+            "confidence": 0.82,
+            "raw": 76.0,
+            "weighted": 14.264
+          },
+          "reversibility": {
+            "adjusted": 86.9,
+            "confidence": 0.82,
+            "raw": 95.0,
+            "weighted": 13.035
+          },
+          "value": {
+            "adjusted": 48.36,
+            "confidence": 0.82,
+            "raw": 48.0,
+            "weighted": 12.09
+          }
+        },
+        "upside": {
+          "affordability": {
+            "adjusted": 76.24,
+            "confidence": 0.82,
+            "raw": 82.0,
+            "weighted": 11.436
+          },
+          "evidence": {
+            "adjusted": 78.7,
+            "confidence": 0.82,
+            "raw": 85.0,
+            "weighted": 11.805
+          },
+          "fairness": {
+            "adjusted": 48.36,
+            "confidence": 0.82,
+            "raw": 48.0,
+            "weighted": 4.836
+          },
+          "resilience": {
+            "adjusted": 63.12,
+            "confidence": 0.82,
+            "raw": 66.0,
+            "weighted": 12.624
+          },
+          "reversibility": {
+            "adjusted": 86.9,
+            "confidence": 0.82,
+            "raw": 95.0,
+            "weighted": 13.035
+          },
+          "value": {
+            "adjusted": 38.52,
+            "confidence": 0.82,
+            "raw": 36.0,
+            "weighted": 9.63
+          }
+        }
+      },
+      "decision_state": "ineligible",
+      "eligible": false,
+      "expected_score": 66.2216,
+      "external_action": false,
+      "failed_gates": [
+        "distributional-floor"
+      ],
+      "max_regret": 15.435,
+      "minimum_distributional_score": 42.0,
+      "option_id": "opt-status-quo",
+      "required_gates": {
+        "budget": "pass",
+        "legal": "pass",
+        "privacy": "pass",
+        "safety": "pass"
+      },
+      "reversible": true,
+      "robust_score": 68.2047,
+      "scenario_regret": {
+        "base": 10.279,
+        "disruption": 0.0,
+        "downside": 2.391,
+        "upside": 15.435
+      },
+      "scenario_scores": {
+        "base": 65.949,
+        "disruption": 65.949,
+        "downside": 69.106,
+        "upside": 63.366
+      },
+      "title": "Retain the current process",
+      "unknown_gates": [],
+      "worst_score": 63.366
+    }
+  ],
+  "process_assessment": {
+    "case_id": "synthetic-public-service-pilot",
+    "check_values": {
+      "access-rights": true,
+      "approvals-complete": true,
+      "assessment-coverage": true,
+      "assumption-falsifiers": true,
+      "assumption-ranges": true,
+      "certainty-boundary": true,
+      "claim-support": true,
+      "confidence-explicit": true,
+      "consequence-corroboration": true,
+      "content-hashes": true,
+      "correct-vintage": true,
+      "cutoff-complete": true,
+      "distributional-scores": true,
+      "external-action-boundary": true,
+      "floor-enforced": true,
+      "forecast-intervals": true,
+      "groups-declared": true,
+      "independence-groups": true,
+      "learning-actions": false,
+      "monitors-assigned": true,
+      "no-future-evidence": true,
+      "not-proven-boundary": true,
+      "override-documented": true,
+      "rationale-timely": true,
+      "reversible-option": true,
+      "review-timely": false,
+      "robust-weights-normalized": true,
+      "rule-locked": true,
+      "scenario-probabilities": true,
+      "source-identity": true,
+      "status-quo-option": true,
+      "tie-break-explicit": true,
+      "weights-normalized": true
+    },
+    "claim_boundary": "The score describes the completeness and integrity of this synthetic decision record. It is not a certification that the decision was correct or that a real system is safe.",
+    "cutoff": "2026-05-31T17:00:00Z",
+    "dimensions": [
+      {
+        "checks": [
+          {
+            "id": "cutoff-complete",
+            "passed": true
+          },
+          {
+            "id": "no-future-evidence",
+            "passed": true
+          },
+          {
+            "id": "correct-vintage",
+            "passed": true
+          },
+          {
+            "id": "rationale-timely",
+            "passed": true
+          }
+        ],
+        "dimension_id": "temporal-integrity",
+        "earned": 20.0,
+        "score": 100.0,
+        "weight": 20
+      },
+      {
+        "checks": [
+          {
+            "id": "source-identity",
+            "passed": true
+          },
+          {
+            "id": "content-hashes",
+            "passed": true
+          },
+          {
+            "id": "access-rights",
+            "passed": true
+          },
+          {
+            "id": "independence-groups",
+            "passed": true
+          }
+        ],
+        "dimension_id": "provenance-quality",
+        "earned": 14.0,
+        "score": 100.0,
+        "weight": 14
+      },
+      {
+        "checks": [
+          {
+            "id": "claim-support",
+            "passed": true
+          },
+          {
+            "id": "consequence-corroboration",
+            "passed": true
+          },
+          {
+            "id": "certainty-boundary",
+            "passed": true
+          },
+          {
+            "id": "not-proven-boundary",
+            "passed": true
+          }
+        ],
+        "dimension_id": "claim-discipline",
+        "earned": 14.0,
+        "score": 100.0,
+        "weight": 14
+      },
+      {
+        "checks": [
+          {
+            "id": "assumption-ranges",
+            "passed": true
+          },
+          {
+            "id": "forecast-intervals",
+            "passed": true
+          },
+          {
+            "id": "scenario-probabilities",
+            "passed": true
+          },
+          {
+            "id": "confidence-explicit",
+            "passed": true
+          }
+        ],
+        "dimension_id": "uncertainty-honesty",
+        "earned": 11.0,
+        "score": 100.0,
+        "weight": 11
+      },
+      {
+        "checks": [
+          {
+            "id": "status-quo-option",
+            "passed": true
+          },
+          {
+            "id": "reversible-option",
+            "passed": true
+          },
+          {
+            "id": "assessment-coverage",
+            "passed": true
+          },
+          {
+            "id": "distributional-scores",
+            "passed": true
+          }
+        ],
+        "dimension_id": "option-completeness",
+        "earned": 10.0,
+        "score": 100.0,
+        "weight": 10
+      },
+      {
+        "checks": [
+          {
+            "id": "weights-normalized",
+            "passed": true
+          },
+          {
+            "id": "robust-weights-normalized",
+            "passed": true
+          },
+          {
+            "id": "tie-break-explicit",
+            "passed": true
+          },
+          {
+            "id": "rule-locked",
+            "passed": true
+          }
+        ],
+        "dimension_id": "decision-rule-transparency",
+        "earned": 10.0,
+        "score": 100.0,
+        "weight": 10
+      },
+      {
+        "checks": [
+          {
+            "id": "approvals-complete",
+            "passed": true
+          },
+          {
+            "id": "external-action-boundary",
+            "passed": true
+          },
+          {
+            "id": "override-documented",
+            "passed": true
+          }
+        ],
+        "dimension_id": "approval-and-action-safety",
+        "earned": 8.0,
+        "score": 100.0,
+        "weight": 8
+      },
+      {
+        "checks": [
+          {
+            "id": "groups-declared",
+            "passed": true
+          },
+          {
+            "id": "floor-enforced",
+            "passed": true
+          }
+        ],
+        "dimension_id": "distributional-awareness",
+        "earned": 5.0,
+        "score": 100.0,
+        "weight": 5
+      },
+      {
+        "checks": [
+          {
+            "id": "assumption-falsifiers",
+            "passed": true
+          },
+          {
+            "id": "monitors-assigned",
+            "passed": true
+          },
+          {
+            "id": "review-timely",
+            "passed": false
+          },
+          {
+            "id": "learning-actions",
+            "passed": false
+          }
+        ],
+        "dimension_id": "monitoring-and-learning",
+        "earned": 4.0,
+        "score": 50.0,
+        "weight": 8
+      }
+    ],
+    "failed_hard_gates": [],
+    "hard_gates": {
+      "approval-integrity": {
+        "details": [],
+        "status": "pass"
+      },
+      "external-action-safety": {
+        "details": [],
+        "status": "pass"
+      },
+      "graph-integrity": {
+        "details": [],
+        "status": "pass"
+      },
+      "high-consequence-corroboration": {
+        "details": [],
+        "status": "pass"
+      },
+      "hindsight-rationale-boundary": {
+        "details": [],
+        "status": "pass"
+      },
+      "no-future-information": {
+        "details": [],
+        "status": "pass"
+      },
+      "rule-immutability": {
+        "details": [],
+        "status": "pass"
+      },
+      "vintage-integrity": {
+        "details": [],
+        "status": "pass"
+      }
+    },
+    "process_level": "exemplary",
+    "process_score": 96.0,
+    "schema_version": 1,
+    "snapshot_fingerprint": "sha256:592826a52a75a012cf3d32cf4fcb730330b7e75ec59f8612a6fe3a9c26754be1"
+  },
+  "recorded_decision_matches_replay": true,
+  "recorded_option_id": "opt-bounded-pilot",
+  "recorded_override": null,
+  "replay_fingerprint": "sha256:cf0af8d2e5acd90c07f57ba9206e938f663e83e973fe6c0b08a2810cee5f27f3",
+  "rule_digest": "sha256:740845435842fbbc0ef5dfaf9a74e48a9bf2892816128a64238dc4d0017c2f08",
+  "rule_version_id": "rule-public-v1",
+  "schema_version": 1,
+  "selected_option_id": "opt-bounded-pilot",
+  "selection_status": "selected",
+  "snapshot_fingerprint": "sha256:592826a52a75a012cf3d32cf4fcb730330b7e75ec59f8612a6fe3a9c26754be1"
+}

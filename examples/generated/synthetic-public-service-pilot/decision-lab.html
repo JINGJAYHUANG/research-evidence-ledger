@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Decision Time Machine — synthetic-public-service-pilot</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:#172132;background:#f4f7fb}body{margin:0}main{max-width:1180px;margin:auto;padding:28px 18px 64px}header{background:#111d32;color:white;border-radius:22px;padding:34px}header p{max-width:74ch;color:#d7e2f1}.metrics,.gates{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:18px 0}article{background:white;border:1px solid #dbe3ee;border-radius:14px;padding:16px}article strong{display:block;font-size:1.35rem}article small{display:block;color:#59677a;margin-top:8px}table{width:100%;border-collapse:collapse;background:white}th,td{padding:10px;border-bottom:1px solid #e1e7f0;text-align:left}.table-wrap{overflow-x:auto;border:1px solid #dbe3ee;border-radius:14px}.pass,.eligible{color:#11633c}.fail,.ineligible{color:#9d2c2c}section{margin-top:34px}code{overflow-wrap:anywhere}@media(max-width:600px){main{padding:12px}header{padding:22px}th,td{font-size:13px}}@media print{body{background:white}header{color:black;background:white;border:1px solid #999}}
+</style></head><body><main>
+<header><p>POINT-IN-TIME DECISION REPLAY</p><h1>synthetic-public-service-pilot</h1><p>This replay reconstructs the stated synthetic decision rule using information in the frozen snapshot. It does not prove the selected option was objectively best or suitable for a real decision.</p></header>
+<section><div class="metrics">
+<article><strong>opt-bounded-pilot</strong><small>replayed selection</small></article>
+<article><strong>96.00</strong><small>process score</small></article>
+<article><strong>exemplary</strong><small>process level</small></article>
+<article><strong>0</strong><small>failed hard gates</small></article>
+</div></section>
+<section id="options"><h2>Options at the decision cutoff</h2><div class="table-wrap"><table><thead><tr><th>Option</th><th>Title</th><th>Robust</th><th>Expected</th><th>Worst</th><th>Regret</th><th>State</th></tr></thead><tbody><tr><td><code>opt-bounded-pilot</code></td><td>Run an assistance-only bounded pilot</td><td>76.32</td><td>74.48</td><td>65.44</td><td>0.51</td><td>eligible</td></tr><tr><td><code>opt-full-rollout</code></td><td>Automate final service decisions</td><td>42.35</td><td>43.46</td><td>24.62</td><td>41.32</td><td>ineligible</td></tr><tr><td><code>opt-status-quo</code></td><td>Retain the current process</td><td>68.20</td><td>66.22</td><td>63.37</td><td>15.44</td><td>ineligible</td></tr></tbody></table></div></section>
+<section id="gates"><h2>Process hard gates</h2><div class="gates"><article><h3>no-future-information</h3><p class='pass'>pass</p><small>No finding.</small></article><article><h3>vintage-integrity</h3><p class='pass'>pass</p><small>No finding.</small></article><article><h3>rule-immutability</h3><p class='pass'>pass</p><small>No finding.</small></article><article><h3>approval-integrity</h3><p class='pass'>pass</p><small>No finding.</small></article><article><h3>external-action-safety</h3><p class='pass'>pass</p><small>No finding.</small></article><article><h3>graph-integrity</h3><p class='pass'>pass</p><small>No finding.</small></article><article><h3>high-consequence-corroboration</h3><p class='pass'>pass</p><small>No finding.</small></article><article><h3>hindsight-rationale-boundary</h3><p class='pass'>pass</p><small>No finding.</small></article></div></section>
+
+<section id="review"><h2>Outcome review</h2><div class="metrics">
+<article><strong>sound-and-fortunate</strong><small>decision-quality quadrant</small></article>
+<article><strong>0.00</strong><small>ex-post regret</small></article>
+<article><strong>opt-bounded-pilot</strong><small>best ex-post option</small></article>
+<article><strong>1.0</strong><small>interval coverage</small></article>
+</div></section>
+<section id="change"><h2>What changed</h2><div class="metrics">
+<article><strong>1</strong><small>new sources</small></article>
+<article><strong>1</strong><small>new claims</small></article>
+<article><strong>false</strong><small>flip from evidence</small></article>
+<article><strong>false</strong><small>flip from rule change</small></article>
+</div></section>
+<section><h2>Evidence boundary</h2><p>This static page contains only synthetic decision records. It does not certify factual correctness, commercial suitability, legal compliance, or external execution.</p></section>
+</main></body></html>

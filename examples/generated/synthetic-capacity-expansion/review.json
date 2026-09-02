@@ -1,0 +1,72 @@
+{
+  "assumption_updates": [
+    {
+      "from_assumption_id": "asm-demand-v1",
+      "lineage_id": "demand-growth",
+      "reason": "Observed demand was lower than the original central estimate.",
+      "to_assumption_id": "asm-demand-v2"
+    }
+  ],
+  "best_ex_post_option_id": "opt-phased",
+  "best_ex_post_utility": 84.0,
+  "case_id": "synthetic-capacity-expansion",
+  "claim_boundary": "A favorable outcome does not prove a sound process, and an unfavorable outcome does not prove a poor process. The quadrant separates decision quality from realized luck in this synthetic case.",
+  "decision_cutoff": "2026-03-31T17:00:00Z",
+  "decision_quality_quadrant": "sound-and-fortunate",
+  "decision_snapshot_fingerprint": "sha256:ba664631423200f3d6fa75ef32505279e271c3865363e4f38f8b530e35d0f2cd",
+  "ex_post_regret": 0.0,
+  "forecast_evaluation": {
+    "evaluated_forecast_count": 1,
+    "forecasts": [
+      {
+        "actual": 0.07,
+        "forecast_id": "forecast-demand-growth",
+        "interval_hit": true,
+        "metric": "demand-growth-fraction",
+        "point_error": 0.03,
+        "realized_event": "near-plan",
+        "realized_event_probability": 0.5
+      }
+    ],
+    "interval_coverage": 1.0,
+    "mean_squared_error": 0.0009,
+    "multiclass_brier_score": 0.375
+  },
+  "learning_actions": [
+    {
+      "action": "Retain modular review gates and refresh demand monthly.",
+      "action_id": "learn-capacity-1",
+      "due_at": "2026-10-01T17:00:00Z",
+      "owner": "planning-owner"
+    }
+  ],
+  "learning_completeness": {
+    "assumption_updates_recorded": true,
+    "learning_actions_assigned": true,
+    "rule_changes_prospective": true,
+    "surprises_recorded": true
+  },
+  "process_level": "exemplary",
+  "process_score": 96.0,
+  "prospective_rule_changes": [
+    {
+      "change_id": "rule-change-fairness",
+      "description": "Increase fairness weight in future decisions.",
+      "effective_from": "2026-07-01T10:00:00Z",
+      "prospective_only": true
+    }
+  ],
+  "review_fingerprint": "sha256:431bb1cf29d614c1d39a08d42dcac841d5d011ed5cd189afc949335a960963fa",
+  "review_snapshot_fingerprint": "sha256:e38d0bab2078723db8c820715ee68dab5ccd4973705ab343e91d10f5b908627e",
+  "reviewed_at": "2026-09-01T17:00:00Z",
+  "schema_version": 1,
+  "selected_ex_post_utility": 84.0,
+  "selected_option_id": "opt-phased",
+  "surprises": [
+    {
+      "description": "Demand landed below the original point forecast but inside the interval.",
+      "severity": "medium",
+      "surprise_id": "surprise-demand"
+    }
+  ]
+}

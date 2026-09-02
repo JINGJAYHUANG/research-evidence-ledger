@@ -1,0 +1,109 @@
+{
+  "$id": "https://github.com/JINGJAYHUANG/research-evidence-ledger/schemas/snapshot.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "active_assessment_ids": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "active_assumption_ids": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "active_rule_ids": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "active_source_ids": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "assessments": {
+      "type": "array"
+    },
+    "assumptions": {
+      "type": "array"
+    },
+    "case_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+      "type": "string"
+    },
+    "claims": {
+      "type": "array"
+    },
+    "cutoff": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "decision": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "decision_rules": {
+      "type": "array"
+    },
+    "forecasts": {
+      "type": "array"
+    },
+    "freeze_metadata": {
+      "type": "object"
+    },
+    "options": {
+      "type": "array"
+    },
+    "outcomes": {
+      "type": "array"
+    },
+    "review": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "scenarios": {
+      "type": "array"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "snapshot_fingerprint": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "sources": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "case_id",
+    "cutoff",
+    "sources",
+    "active_source_ids",
+    "claims",
+    "assumptions",
+    "forecasts",
+    "scenarios",
+    "options",
+    "assessments",
+    "decision_rules",
+    "decision",
+    "outcomes",
+    "review",
+    "freeze_metadata",
+    "snapshot_fingerprint"
+  ],
+  "title": "Frozen point-in-time decision snapshot",
+  "type": "object"
+}

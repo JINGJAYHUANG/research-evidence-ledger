@@ -1,0 +1,59 @@
+{
+  "$id": "https://github.com/JINGJAYHUANG/research-evidence-ledger/schemas/diff.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "after_cutoff": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "before_cutoff": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "changes": {
+      "type": "object"
+    },
+    "claim_boundary": {
+      "type": "string"
+    },
+    "counterfactuals": {
+      "type": "object"
+    },
+    "decision_flip_from_rule_change": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "decision_flip_with_new_evidence_same_rule": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "diff_fingerprint": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "case_id",
+    "before_cutoff",
+    "after_cutoff",
+    "changes",
+    "counterfactuals",
+    "decision_flip_with_new_evidence_same_rule",
+    "decision_flip_from_rule_change",
+    "claim_boundary",
+    "diff_fingerprint"
+  ],
+  "title": "Snapshot and counterfactual replay diff",
+  "type": "object"
+}

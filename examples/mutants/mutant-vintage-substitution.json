@@ -1,0 +1,899 @@
+{
+  "assessments": [
+    {
+      "assessment_id": "assess-defer-v1",
+      "criterion_confidence": {
+        "affordability": 0.82,
+        "evidence": 0.82,
+        "fairness": 0.82,
+        "resilience": 0.82,
+        "reversibility": 0.82,
+        "value": 0.82
+      },
+      "distributional_scores": {
+        "customers": 48,
+        "owners": 82,
+        "workers": 55
+      },
+      "gates": {
+        "budget": "pass",
+        "legal": "pass",
+        "privacy": "pass",
+        "safety": "pass"
+      },
+      "option_id": "opt-defer",
+      "recorded_at": "2026-03-26T09:00:00Z",
+      "scenario_scores": {
+        "base": {
+          "affordability": 88,
+          "evidence": 78,
+          "fairness": 58,
+          "resilience": 48,
+          "reversibility": 92,
+          "value": 48
+        },
+        "disruption": {
+          "affordability": 85,
+          "evidence": 75,
+          "fairness": 50,
+          "resilience": 35,
+          "reversibility": 88,
+          "value": 40
+        },
+        "downside": {
+          "affordability": 90,
+          "evidence": 82,
+          "fairness": 65,
+          "resilience": 70,
+          "reversibility": 92,
+          "value": 62
+        },
+        "upside": {
+          "affordability": 88,
+          "evidence": 70,
+          "fairness": 48,
+          "resilience": 30,
+          "reversibility": 92,
+          "value": 35
+        }
+      },
+      "source_ids": [
+        "src-demand-v1",
+        "src-capacity-audit",
+        "src-customer-study"
+      ],
+      "supersedes": null
+    },
+    {
+      "assessment_id": "assess-full-v1",
+      "criterion_confidence": {
+        "affordability": 0.78,
+        "evidence": 0.68,
+        "fairness": 0.65,
+        "resilience": 0.7,
+        "reversibility": 0.9,
+        "value": 0.74
+      },
+      "distributional_scores": {
+        "customers": 80,
+        "owners": 38,
+        "workers": 58
+      },
+      "gates": {
+        "budget": "pass",
+        "legal": "pass",
+        "privacy": "pass",
+        "safety": "pass"
+      },
+      "option_id": "opt-full",
+      "recorded_at": "2026-03-26T09:05:00Z",
+      "scenario_scores": {
+        "base": {
+          "affordability": 42,
+          "evidence": 60,
+          "fairness": 62,
+          "resilience": 64,
+          "reversibility": 20,
+          "value": 88
+        },
+        "disruption": {
+          "affordability": 10,
+          "evidence": 45,
+          "fairness": 35,
+          "resilience": 20,
+          "reversibility": 10,
+          "value": 25
+        },
+        "downside": {
+          "affordability": 20,
+          "evidence": 48,
+          "fairness": 42,
+          "resilience": 30,
+          "reversibility": 15,
+          "value": 45
+        },
+        "upside": {
+          "affordability": 55,
+          "evidence": 65,
+          "fairness": 70,
+          "resilience": 80,
+          "reversibility": 18,
+          "value": 96
+        }
+      },
+      "source_ids": [
+        "src-demand-v1",
+        "src-capacity-audit"
+      ],
+      "supersedes": null
+    },
+    {
+      "assessment_id": "assess-phased-v1",
+      "criterion_confidence": {
+        "affordability": 0.8,
+        "evidence": 0.82,
+        "fairness": 0.78,
+        "resilience": 0.84,
+        "reversibility": 0.88,
+        "value": 0.8
+      },
+      "distributional_scores": {
+        "customers": 80,
+        "owners": 65,
+        "workers": 72
+      },
+      "gates": {
+        "budget": "pass",
+        "legal": "pass",
+        "privacy": "pass",
+        "safety": "pass"
+      },
+      "option_id": "opt-phased",
+      "recorded_at": "2026-03-26T09:10:00Z",
+      "scenario_scores": {
+        "base": {
+          "affordability": 70,
+          "evidence": 82,
+          "fairness": 76,
+          "resilience": 86,
+          "reversibility": 82,
+          "value": 82
+        },
+        "disruption": {
+          "affordability": 60,
+          "evidence": 78,
+          "fairness": 68,
+          "resilience": 74,
+          "reversibility": 80,
+          "value": 62
+        },
+        "downside": {
+          "affordability": 68,
+          "evidence": 84,
+          "fairness": 74,
+          "resilience": 82,
+          "reversibility": 84,
+          "value": 72
+        },
+        "upside": {
+          "affordability": 75,
+          "evidence": 80,
+          "fairness": 80,
+          "resilience": 88,
+          "reversibility": 80,
+          "value": 90
+        }
+      },
+      "source_ids": [
+        "src-demand-v1",
+        "src-capacity-audit",
+        "src-customer-study",
+        "src-risk-review"
+      ],
+      "supersedes": null
+    },
+    {
+      "assessment_id": "assess-defer-v2",
+      "criterion_confidence": {
+        "affordability": 0.86,
+        "evidence": 0.86,
+        "fairness": 0.86,
+        "resilience": 0.86,
+        "reversibility": 0.86,
+        "value": 0.86
+      },
+      "distributional_scores": {
+        "customers": 55,
+        "owners": 84,
+        "workers": 58
+      },
+      "gates": {
+        "budget": "pass",
+        "legal": "pass",
+        "privacy": "pass",
+        "safety": "pass"
+      },
+      "option_id": "opt-defer",
+      "recorded_at": "2026-06-20T09:00:00Z",
+      "scenario_scores": {
+        "base": {
+          "affordability": 88,
+          "evidence": 82,
+          "fairness": 60,
+          "resilience": 55,
+          "reversibility": 92,
+          "value": 55
+        },
+        "disruption": {
+          "affordability": 85,
+          "evidence": 80,
+          "fairness": 52,
+          "resilience": 40,
+          "reversibility": 88,
+          "value": 45
+        },
+        "downside": {
+          "affordability": 90,
+          "evidence": 86,
+          "fairness": 68,
+          "resilience": 74,
+          "reversibility": 92,
+          "value": 68
+        },
+        "upside": {
+          "affordability": 88,
+          "evidence": 78,
+          "fairness": 52,
+          "resilience": 40,
+          "reversibility": 92,
+          "value": 42
+        }
+      },
+      "source_ids": [
+        "src-demand-v2",
+        "src-capacity-audit",
+        "src-customer-study"
+      ],
+      "supersedes": "assess-defer-v1"
+    },
+    {
+      "assessment_id": "assess-full-v2",
+      "criterion_confidence": {
+        "affordability": 0.84,
+        "evidence": 0.84,
+        "fairness": 0.84,
+        "resilience": 0.84,
+        "reversibility": 0.84,
+        "value": 0.84
+      },
+      "distributional_scores": {
+        "customers": 68,
+        "owners": 32,
+        "workers": 54
+      },
+      "gates": {
+        "budget": "pass",
+        "legal": "pass",
+        "privacy": "pass",
+        "safety": "pass"
+      },
+      "option_id": "opt-full",
+      "recorded_at": "2026-06-20T09:05:00Z",
+      "scenario_scores": {
+        "base": {
+          "affordability": 35,
+          "evidence": 66,
+          "fairness": 58,
+          "resilience": 58,
+          "reversibility": 20,
+          "value": 72
+        },
+        "disruption": {
+          "affordability": 8,
+          "evidence": 50,
+          "fairness": 30,
+          "resilience": 18,
+          "reversibility": 10,
+          "value": 20
+        },
+        "downside": {
+          "affordability": 18,
+          "evidence": 58,
+          "fairness": 38,
+          "resilience": 25,
+          "reversibility": 15,
+          "value": 38
+        },
+        "upside": {
+          "affordability": 45,
+          "evidence": 68,
+          "fairness": 64,
+          "resilience": 74,
+          "reversibility": 18,
+          "value": 88
+        }
+      },
+      "source_ids": [
+        "src-demand-v2",
+        "src-capacity-audit"
+      ],
+      "supersedes": "assess-full-v1"
+    },
+    {
+      "assessment_id": "assess-phased-v2",
+      "criterion_confidence": {
+        "affordability": 0.88,
+        "evidence": 0.88,
+        "fairness": 0.88,
+        "resilience": 0.88,
+        "reversibility": 0.88,
+        "value": 0.88
+      },
+      "distributional_scores": {
+        "customers": 82,
+        "owners": 68,
+        "workers": 74
+      },
+      "gates": {
+        "budget": "pass",
+        "legal": "pass",
+        "privacy": "pass",
+        "safety": "pass"
+      },
+      "option_id": "opt-phased",
+      "recorded_at": "2026-06-20T09:10:00Z",
+      "scenario_scores": {
+        "base": {
+          "affordability": 72,
+          "evidence": 88,
+          "fairness": 78,
+          "resilience": 88,
+          "reversibility": 84,
+          "value": 80
+        },
+        "disruption": {
+          "affordability": 62,
+          "evidence": 84,
+          "fairness": 70,
+          "resilience": 78,
+          "reversibility": 82,
+          "value": 66
+        },
+        "downside": {
+          "affordability": 72,
+          "evidence": 90,
+          "fairness": 78,
+          "resilience": 85,
+          "reversibility": 86,
+          "value": 75
+        },
+        "upside": {
+          "affordability": 76,
+          "evidence": 86,
+          "fairness": 82,
+          "resilience": 90,
+          "reversibility": 82,
+          "value": 86
+        }
+      },
+      "source_ids": [
+        "src-demand-v2",
+        "src-capacity-audit",
+        "src-customer-study",
+        "src-risk-review"
+      ],
+      "supersedes": "assess-phased-v1"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumption_id": "asm-demand-v1",
+      "confidence": 0.72,
+      "dependencies": [],
+      "falsifiers": [
+        "Observed value leaves the declared range for demand-growth."
+      ],
+      "lineage_id": "demand-growth",
+      "monitor": {
+        "cadence": "monthly",
+        "metric": "demand-growth",
+        "owner": "decision-owner",
+        "trigger": "outside declared range"
+      },
+      "recorded_at": "2026-03-23T10:00:00Z",
+      "statement": "Demand growth over the planning horizon.",
+      "supersedes": null,
+      "valid_from": "2026-03-23T10:00:00Z",
+      "valid_until": null,
+      "value": {
+        "base": 0.1,
+        "high": 0.22,
+        "low": 0.03,
+        "unit": "fraction"
+      }
+    },
+    {
+      "assumption_id": "asm-lead-time-v1",
+      "confidence": 0.68,
+      "dependencies": [
+        "asm-demand-v1"
+      ],
+      "falsifiers": [
+        "Observed value leaves the declared range for implementation-lead-time."
+      ],
+      "lineage_id": "implementation-lead-time",
+      "monitor": {
+        "cadence": "monthly",
+        "metric": "implementation-lead-time",
+        "owner": "decision-owner",
+        "trigger": "outside declared range"
+      },
+      "recorded_at": "2026-03-23T10:30:00Z",
+      "statement": "Implementation lead time for the modular option.",
+      "supersedes": null,
+      "valid_from": "2026-03-23T10:30:00Z",
+      "valid_until": null,
+      "value": {
+        "base": 12,
+        "high": 18,
+        "low": 8,
+        "unit": "weeks"
+      }
+    },
+    {
+      "assumption_id": "asm-demand-v2",
+      "confidence": 0.81,
+      "dependencies": [],
+      "falsifiers": [
+        "Observed value leaves the declared range for demand-growth."
+      ],
+      "lineage_id": "demand-growth",
+      "monitor": {
+        "cadence": "monthly",
+        "metric": "demand-growth",
+        "owner": "decision-owner",
+        "trigger": "outside declared range"
+      },
+      "recorded_at": "2026-06-16T10:00:00Z",
+      "statement": "Updated demand growth after six months.",
+      "supersedes": "asm-demand-v1",
+      "valid_from": "2026-06-16T10:00:00Z",
+      "valid_until": null,
+      "value": {
+        "base": 0.06,
+        "high": 0.14,
+        "low": 0.01,
+        "unit": "fraction"
+      }
+    }
+  ],
+  "case_as_of": "2026-09-01T17:00:00Z",
+  "case_id": "mutant-vintage-substitution",
+  "claims": [
+    {
+      "certainty": "confirmed",
+      "claim_id": "claim-capacity-gap",
+      "claim_type": "fact",
+      "consequence": "high",
+      "contradict_source_ids": [],
+      "not_proven": [
+        "Does not prove the exact future shortage or justify a specific expansion size."
+      ],
+      "qualification_source_ids": [],
+      "recorded_at": "2026-03-24T12:00:00Z",
+      "scope": "synthetic case only",
+      "statement": "The current system has a material capacity constraint under central demand assumptions.",
+      "support_source_ids": [
+        "src-demand-v1",
+        "src-capacity-audit"
+      ],
+      "used_for_decision": true
+    },
+    {
+      "certainty": "confirmed",
+      "claim_id": "claim-phased-resilience",
+      "claim_type": "fact",
+      "consequence": "high",
+      "contradict_source_ids": [],
+      "not_proven": [
+        "Does not prove the phased option will have the highest realized financial return."
+      ],
+      "qualification_source_ids": [],
+      "recorded_at": "2026-03-25T12:00:00Z",
+      "scope": "synthetic case only",
+      "statement": "A phased modular option is more reversible than the full expansion option.",
+      "support_source_ids": [
+        "src-risk-review",
+        "src-customer-study"
+      ],
+      "used_for_decision": true
+    },
+    {
+      "certainty": "confirmed",
+      "claim_id": "claim-demand-revision",
+      "claim_type": "fact",
+      "consequence": "medium",
+      "contradict_source_ids": [],
+      "not_proven": [
+        "Does not show the original decision used future information."
+      ],
+      "qualification_source_ids": [],
+      "recorded_at": "2026-06-16T12:00:00Z",
+      "scope": "synthetic case only",
+      "statement": "Later demand evidence is lower than the original upper range.",
+      "support_source_ids": [
+        "src-demand-v2"
+      ],
+      "used_for_decision": false
+    }
+  ],
+  "decision": {
+    "action": {
+      "executed": false,
+      "execution_receipt": null,
+      "external": false
+    },
+    "approval_roles": [
+      "decision-owner",
+      "risk-reviewer"
+    ],
+    "decision_cutoff": "2026-03-31T17:00:00Z",
+    "decision_id": "decision-capacity-001",
+    "override": null,
+    "rationale": "The phased option preserves upside while limiting irreversible exposure.",
+    "rationale_recorded_at": "2026-03-31T16:40:00Z",
+    "rationale_source_ids": [
+      "src-demand-v1",
+      "src-capacity-audit",
+      "src-customer-study",
+      "src-risk-review"
+    ],
+    "recorded_at": "2026-03-31T16:50:00Z",
+    "required_approval_roles": [
+      "decision-owner",
+      "risk-reviewer"
+    ],
+    "rule_digest": "sha256:55583e09495172020b020982028b07a54d8067dfabe3bec205aa22aecfb980b0",
+    "rule_version_id": "rule-robust-v1",
+    "selected_option_id": "opt-phased"
+  },
+  "decision_rules": [
+    {
+      "change_control": {
+        "locked": true,
+        "owner": "decision-governance",
+        "prospective_only": true
+      },
+      "criteria_weights": {
+        "affordability": 0.15,
+        "evidence": 0.15,
+        "fairness": 0.1,
+        "resilience": 0.2,
+        "reversibility": 0.15,
+        "value": 0.25
+      },
+      "distributional_floor": 35,
+      "effective_from": "2026-03-27T10:00:00Z",
+      "hard_gate_ids": [
+        "legal",
+        "privacy",
+        "budget",
+        "safety"
+      ],
+      "recorded_at": "2026-03-27T10:00:00Z",
+      "robust_weights": {
+        "base": 0.2,
+        "expected": 0.4,
+        "regret": 0.15,
+        "worst": 0.25
+      },
+      "rule_digest": "sha256:55583e09495172020b020982028b07a54d8067dfabe3bec205aa22aecfb980b0",
+      "rule_id": "robust-mcda",
+      "rule_version_id": "rule-robust-v1",
+      "supersedes": null,
+      "tie_break": [
+        "fully-resolved-gates",
+        "higher-robust-score",
+        "higher-worst-score",
+        "lower-max-regret",
+        "option-id"
+      ]
+    },
+    {
+      "change_control": {
+        "locked": true,
+        "owner": "decision-governance",
+        "prospective_only": true
+      },
+      "criteria_weights": {
+        "affordability": 0.13,
+        "evidence": 0.15,
+        "fairness": 0.13,
+        "resilience": 0.22,
+        "reversibility": 0.15,
+        "value": 0.22
+      },
+      "distributional_floor": 35,
+      "effective_from": "2026-07-01T10:00:00Z",
+      "hard_gate_ids": [
+        "legal",
+        "privacy",
+        "budget",
+        "safety"
+      ],
+      "recorded_at": "2026-07-01T10:00:00Z",
+      "robust_weights": {
+        "base": 0.2,
+        "expected": 0.4,
+        "regret": 0.15,
+        "worst": 0.25
+      },
+      "rule_digest": "sha256:e424ba3d64d668c552bb049335eac1be641b9826c72ac3c15e1f06c9d91c9a66",
+      "rule_id": "robust-mcda",
+      "rule_version_id": "rule-robust-v2",
+      "supersedes": "rule-robust-v1",
+      "tie_break": [
+        "fully-resolved-gates",
+        "higher-robust-score",
+        "higher-worst-score",
+        "lower-max-regret",
+        "option-id"
+      ]
+    }
+  ],
+  "expected_failed_hard_gates": [
+    "vintage-integrity"
+  ],
+  "forecasts": [
+    {
+      "forecast_id": "forecast-demand-growth",
+      "interval": {
+        "confidence": 0.8,
+        "lower": 0.03,
+        "point": 0.1,
+        "upper": 0.22
+      },
+      "issued_at": "2026-03-24T09:00:00Z",
+      "metric": "demand-growth-fraction",
+      "outcome": {
+        "event": "near-plan",
+        "observed_at": "2026-08-31T12:00:00Z",
+        "value": 0.07
+      },
+      "probabilities": {
+        "above-plan": 0.25,
+        "below-plan": 0.25,
+        "near-plan": 0.5
+      },
+      "resolve_by": "2026-08-31T23:59:00Z"
+    }
+  ],
+  "options": [
+    {
+      "description": "Retain current capacity and use short-term triage.",
+      "external_action": false,
+      "is_status_quo": true,
+      "option_id": "opt-defer",
+      "recorded_at": "2026-03-24T08:00:00Z",
+      "reversible": true,
+      "title": "Defer capacity investment"
+    },
+    {
+      "description": "Build the full target capacity immediately.",
+      "external_action": false,
+      "is_status_quo": false,
+      "option_id": "opt-full",
+      "recorded_at": "2026-03-24T08:05:00Z",
+      "reversible": false,
+      "title": "Commit to full expansion"
+    },
+    {
+      "description": "Add reversible modules with explicit review gates.",
+      "external_action": false,
+      "is_status_quo": false,
+      "option_id": "opt-phased",
+      "recorded_at": "2026-03-24T08:10:00Z",
+      "reversible": true,
+      "title": "Phase modular capacity"
+    }
+  ],
+  "outcomes": [
+    {
+      "metrics": {
+        "capital-commitment-index": 0.58,
+        "service-continuity": 0.96
+      },
+      "observed_at": "2026-08-31T12:00:00Z",
+      "option_utilities": {
+        "opt-defer": 68,
+        "opt-full": 61,
+        "opt-phased": 84
+      },
+      "outcome_id": "outcome-capacity-001",
+      "realized_scenario_id": "base"
+    }
+  ],
+  "public_boundary": {
+    "contains_credentials": false,
+    "contains_personal_data": false,
+    "external_actions_enabled": false,
+    "statement": "All organizations, people, values, evidence, decisions, and outcomes are fictional.",
+    "synthetic_only": true
+  },
+  "review": {
+    "assumption_updates": [
+      {
+        "from_assumption_id": "asm-demand-v1",
+        "lineage_id": "demand-growth",
+        "reason": "Observed demand was lower than the original central estimate.",
+        "to_assumption_id": "asm-demand-v2"
+      }
+    ],
+    "learning_actions": [
+      {
+        "action": "Retain modular review gates and refresh demand monthly.",
+        "action_id": "learn-capacity-1",
+        "due_at": "2026-10-01T17:00:00Z",
+        "owner": "planning-owner"
+      }
+    ],
+    "prospective_rule_changes": [
+      {
+        "change_id": "rule-change-fairness",
+        "description": "Increase fairness weight in future decisions.",
+        "effective_from": "2026-07-01T10:00:00Z",
+        "prospective_only": true
+      }
+    ],
+    "reviewed_at": "2026-09-01T17:00:00Z",
+    "surprises": [
+      {
+        "description": "Demand landed below the original point forecast but inside the interval.",
+        "severity": "medium",
+        "surprise_id": "surprise-demand"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "description": "Central synthetic planning assumptions.",
+      "is_base": true,
+      "probability": 0.45,
+      "scenario_id": "base",
+      "title": "Base case"
+    },
+    {
+      "description": "Demand and execution conditions improve.",
+      "is_base": false,
+      "probability": 0.2,
+      "scenario_id": "upside",
+      "title": "Upside"
+    },
+    {
+      "description": "Demand or benefits underperform.",
+      "is_base": false,
+      "probability": 0.25,
+      "scenario_id": "downside",
+      "title": "Downside"
+    },
+    {
+      "description": "Implementation disruption and cost pressure.",
+      "is_base": false,
+      "probability": 0.1,
+      "scenario_id": "disruption",
+      "title": "Disruption"
+    }
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:cabc8cd80e2b50f7238377199e5b340b3037547584298594440974d2cf9df0dc",
+      "effective_at": null,
+      "independence_group": "planning-unit",
+      "license": "CC0-1.0",
+      "lineage_id": "demand-outlook",
+      "observed_at": "2026-03-15T10:00:00Z",
+      "published_at": "2026-03-15T09:00:00Z",
+      "publisher": "Fictional Planning Unit",
+      "source_id": "src-demand-v1",
+      "source_type": "synthetic-record",
+      "summary": "Demand is expected to grow, but the upper tail is material.",
+      "supersedes": null,
+      "title": "Synthetic demand outlook v1",
+      "version": "1.0"
+    },
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:ae7ed4d588b4283e4ac4708f6651f963ddc979c381f68a86dee90f39a90e25c5",
+      "effective_at": null,
+      "independence_group": "independent-assurance",
+      "license": "CC0-1.0",
+      "lineage_id": "capacity-audit",
+      "observed_at": "2026-03-18T11:00:00Z",
+      "published_at": "2026-03-18T09:00:00Z",
+      "publisher": "Independent Fictional Assurance Team",
+      "source_id": "src-capacity-audit",
+      "source_type": "synthetic-record",
+      "summary": "Current constrained capacity is documented with a bounded measurement error.",
+      "supersedes": null,
+      "title": "Synthetic capacity audit",
+      "version": "1.0"
+    },
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:643bee37d47c8414c5c5b99d7f0dbb427a362999d55144ea8a564709cc6a6f1b",
+      "effective_at": null,
+      "independence_group": "market-institute",
+      "license": "CC0-1.0",
+      "lineage_id": "customer-study",
+      "observed_at": "2026-03-20T10:00:00Z",
+      "published_at": "2026-03-20T09:00:00Z",
+      "publisher": "Fictional Market Institute",
+      "source_id": "src-customer-study",
+      "source_type": "synthetic-record",
+      "summary": "Customers value continuity but do not support an irreversible full expansion under weak demand.",
+      "supersedes": null,
+      "title": "Synthetic customer continuity study",
+      "version": "1.0"
+    },
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:77389d465af515a15728d0c512b291f49e62f1429e4ff3b5711bfe85ca31a64a",
+      "effective_at": null,
+      "independence_group": "risk-office",
+      "license": "CC0-1.0",
+      "lineage_id": "risk-review",
+      "observed_at": "2026-03-22T10:00:00Z",
+      "published_at": "2026-03-22T09:00:00Z",
+      "publisher": "Fictional Risk Office",
+      "source_id": "src-risk-review",
+      "source_type": "synthetic-record",
+      "summary": "A phased modular expansion has lower irreversibility and interruption risk.",
+      "supersedes": null,
+      "title": "Synthetic implementation risk review",
+      "version": "1.0"
+    },
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:f1781950e1a9d910f801b0bcb9865d56fe1ca8ffc523f1d585f264e313703aba",
+      "effective_at": null,
+      "independence_group": "planning-unit",
+      "license": "CC0-1.0",
+      "lineage_id": "demand-outlook",
+      "observed_at": "2026-03-28T10:00:00Z",
+      "published_at": "2026-03-28T09:00:00Z",
+      "publisher": "Fictional Planning Unit",
+      "source_id": "src-demand-v2",
+      "source_type": "synthetic-record",
+      "summary": "Observed demand growth is below the upper range but remains above the status-quo case.",
+      "supersedes": "src-demand-v1",
+      "title": "Synthetic demand outlook v2",
+      "version": "2.0"
+    },
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:e19aa91a70e795483f0b7fb4d96bfd4b2041b0db3bfcf49897b952d0da6dba03",
+      "effective_at": null,
+      "independence_group": "independent-assurance",
+      "license": "CC0-1.0",
+      "lineage_id": "implementation-observation",
+      "observed_at": "2026-08-15T10:00:00Z",
+      "published_at": "2026-08-15T09:00:00Z",
+      "publisher": "Independent Fictional Assurance Team",
+      "source_id": "src-implementation-observation",
+      "source_type": "synthetic-record",
+      "summary": "The phased option preserved service and avoided the largest fixed commitment.",
+      "supersedes": null,
+      "title": "Synthetic implementation observation",
+      "version": "1.0"
+    }
+  ],
+  "title": "Adversarial mutant: vintage-substitution"
+}

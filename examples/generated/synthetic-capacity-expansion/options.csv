@@ -1,0 +1,4 @@
+option_id,title,robust_score,expected_score,worst_score,max_regret,eligible,failed_gates,unknown_gates
+opt-defer,Defer capacity investment,63.5865,63.0995,55.781,21.593,True,,
+opt-full,Commit to full expansion,47.9439,49.7628,29.61,36.83,True,,
+opt-phased,Phase modular capacity,76.219,74.0045,66.44,'-0.0,True,,

@@ -1,0 +1,90 @@
+{
+  "after_cutoff": "2026-09-01T17:00:00Z",
+  "after_snapshot_fingerprint": "sha256:e38d0bab2078723db8c820715ee68dab5ccd4973705ab343e91d10f5b908627e",
+  "before_cutoff": "2026-03-31T17:00:00Z",
+  "before_snapshot_fingerprint": "sha256:ba664631423200f3d6fa75ef32505279e271c3865363e4f38f8b530e35d0f2cd",
+  "case_id": "synthetic-capacity-expansion",
+  "changes": {
+    "assessments": {
+      "added": [
+        "assess-defer-v2",
+        "assess-full-v2",
+        "assess-phased-v2"
+      ],
+      "changed": [],
+      "removed": [
+        "assess-defer-v1",
+        "assess-full-v1",
+        "assess-phased-v1"
+      ]
+    },
+    "assumptions": {
+      "added": [
+        "asm-demand-v2"
+      ],
+      "changed": [],
+      "removed": [
+        "asm-demand-v1"
+      ]
+    },
+    "claims": {
+      "added": [
+        "claim-demand-revision"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "decision_rules": {
+      "added": [
+        "rule-robust-v2"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "forecasts": {
+      "added": [],
+      "changed": [
+        {
+          "after_digest": "sha256:6ae00cede8b99c62e9ccbc7aaf7b358cf7d65645d9ae6189373071bbd9e5b256",
+          "before_digest": "sha256:a16a191bde8b210756c4fc1ea1d2fc025007bd00ac8f03cfff754cfe6245b8e3",
+          "id": "forecast-demand-growth"
+        }
+      ],
+      "removed": []
+    },
+    "outcomes": {
+      "added": [
+        "outcome-capacity-001"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "sources": {
+      "added": [
+        "src-demand-v2",
+        "src-implementation-observation"
+      ],
+      "changed": [],
+      "removed": []
+    }
+  },
+  "claim_boundary": "A decision flip shows sensitivity to new evidence or a prospective rule change. It does not prove that the later decision is universally correct.",
+  "counterfactuals": {
+    "decision_time_original_rule": {
+      "rule_version_id": "rule-robust-v1",
+      "selected_option_id": "opt-phased"
+    },
+    "later_evidence_latest_rule": {
+      "rule_version_id": "rule-robust-v2",
+      "selected_option_id": "opt-phased"
+    },
+    "later_evidence_original_rule": {
+      "rule_version_id": "rule-robust-v1",
+      "selected_option_id": "opt-phased"
+    }
+  },
+  "decision_flip_from_rule_change": false,
+  "decision_flip_with_new_evidence_same_rule": false,
+  "diff_fingerprint": "sha256:fc37964106ea7f5f39423cf4dbfa56a32a0da855205bdfef0dd842624dc60864",
+  "schema_version": 1
+}

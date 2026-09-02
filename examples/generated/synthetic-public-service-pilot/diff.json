@@ -1,0 +1,75 @@
+{
+  "after_cutoff": "2026-09-01T19:00:00Z",
+  "after_snapshot_fingerprint": "sha256:75cf71325c4ccbd81f375eaa8ad6e92332ad720565a52fa1d0fd9fc76df7daee",
+  "before_cutoff": "2026-05-31T17:00:00Z",
+  "before_snapshot_fingerprint": "sha256:592826a52a75a012cf3d32cf4fcb730330b7e75ec59f8612a6fe3a9c26754be1",
+  "case_id": "synthetic-public-service-pilot",
+  "changes": {
+    "assessments": {
+      "added": [],
+      "changed": [],
+      "removed": []
+    },
+    "assumptions": {
+      "added": [],
+      "changed": [],
+      "removed": []
+    },
+    "claims": {
+      "added": [
+        "claim-pilot-outcome"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "decision_rules": {
+      "added": [],
+      "changed": [],
+      "removed": []
+    },
+    "forecasts": {
+      "added": [],
+      "changed": [
+        {
+          "after_digest": "sha256:31deae051ac0589b7e968c71be3afb9b2b8d919e5ab7fa1d58c1d5f8a28d8eb0",
+          "before_digest": "sha256:93ea6766fe2953a8805014c61c7fae9c005123e6fab515050dd193a85af09222",
+          "id": "forecast-wait-reduction"
+        }
+      ],
+      "removed": []
+    },
+    "outcomes": {
+      "added": [
+        "outcome-public-001"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "sources": {
+      "added": [
+        "src-pilot-outcome"
+      ],
+      "changed": [],
+      "removed": []
+    }
+  },
+  "claim_boundary": "A decision flip shows sensitivity to new evidence or a prospective rule change. It does not prove that the later decision is universally correct.",
+  "counterfactuals": {
+    "decision_time_original_rule": {
+      "rule_version_id": "rule-public-v1",
+      "selected_option_id": "opt-bounded-pilot"
+    },
+    "later_evidence_latest_rule": {
+      "rule_version_id": "rule-public-v1",
+      "selected_option_id": "opt-bounded-pilot"
+    },
+    "later_evidence_original_rule": {
+      "rule_version_id": "rule-public-v1",
+      "selected_option_id": "opt-bounded-pilot"
+    }
+  },
+  "decision_flip_from_rule_change": false,
+  "decision_flip_with_new_evidence_same_rule": false,
+  "diff_fingerprint": "sha256:ad6556fd0aba061e3d88769850e02fb7e4cd71e78fa735f259aa011503b0c451",
+  "schema_version": 1
+}

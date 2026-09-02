@@ -1,0 +1,664 @@
+{
+  "active_assessment_ids": {
+    "opt-autonomous": "assess-autonomous-v2",
+    "opt-manual": "assess-manual-v2",
+    "opt-sandbox": "assess-sandbox-v2"
+  },
+  "active_assumption_ids": {
+    "integration-hours": "asm-integration-v2",
+    "time-saved": "asm-time-saved-v1"
+  },
+  "active_rule_ids": {
+    "robust-mcda": "rule-agent-v2"
+  },
+  "active_source_ids": {
+    "agent-evaluation": "src-agent-eval",
+    "integration-postmortem": "src-integration-postmortem",
+    "security-review": "src-security-review",
+    "user-study": "src-user-study"
+  },
+  "assessments": [
+    {
+      "assessment_id": "assess-autonomous-v2",
+      "criterion_confidence": {
+        "affordability": 0.86,
+        "evidence": 0.86,
+        "fairness": 0.86,
+        "resilience": 0.86,
+        "reversibility": 0.86,
+        "value": 0.86
+      },
+      "distributional_scores": {
+        "analysts": 72,
+        "leaders": 45,
+        "security": 12
+      },
+      "gates": {
+        "budget": "pass",
+        "legal": "unknown",
+        "privacy": "fail",
+        "safety": "fail"
+      },
+      "option_id": "opt-autonomous",
+      "recorded_at": "2026-08-22T09:10:00Z",
+      "scenario_scores": {
+        "base": {
+          "affordability": 38,
+          "evidence": 42,
+          "fairness": 36,
+          "resilience": 28,
+          "reversibility": 12,
+          "value": 75
+        },
+        "disruption": {
+          "affordability": 12,
+          "evidence": 24,
+          "fairness": 15,
+          "resilience": 8,
+          "reversibility": 5,
+          "value": 20
+        },
+        "downside": {
+          "affordability": 18,
+          "evidence": 30,
+          "fairness": 20,
+          "resilience": 12,
+          "reversibility": 8,
+          "value": 35
+        },
+        "upside": {
+          "affordability": 42,
+          "evidence": 44,
+          "fairness": 40,
+          "resilience": 32,
+          "reversibility": 10,
+          "value": 82
+        }
+      },
+      "source_ids": [
+        "src-security-review",
+        "src-integration-postmortem"
+      ],
+      "supersedes": "assess-autonomous-v1"
+    },
+    {
+      "assessment_id": "assess-manual-v2",
+      "criterion_confidence": {
+        "affordability": 0.9,
+        "evidence": 0.9,
+        "fairness": 0.9,
+        "resilience": 0.9,
+        "reversibility": 0.9,
+        "value": 0.9
+      },
+      "distributional_scores": {
+        "analysts": 68,
+        "leaders": 72,
+        "security": 90
+      },
+      "gates": {
+        "budget": "pass",
+        "legal": "pass",
+        "privacy": "pass",
+        "safety": "pass"
+      },
+      "option_id": "opt-manual",
+      "recorded_at": "2026-08-22T09:00:00Z",
+      "scenario_scores": {
+        "base": {
+          "affordability": 86,
+          "evidence": 88,
+          "fairness": 72,
+          "resilience": 82,
+          "reversibility": 96,
+          "value": 70
+        },
+        "disruption": {
+          "affordability": 88,
+          "evidence": 88,
+          "fairness": 74,
+          "resilience": 84,
+          "reversibility": 96,
+          "value": 70
+        },
+        "downside": {
+          "affordability": 90,
+          "evidence": 90,
+          "fairness": 78,
+          "resilience": 88,
+          "reversibility": 96,
+          "value": 78
+        },
+        "upside": {
+          "affordability": 86,
+          "evidence": 84,
+          "fairness": 66,
+          "resilience": 78,
+          "reversibility": 96,
+          "value": 60
+        }
+      },
+      "source_ids": [
+        "src-integration-postmortem",
+        "src-user-study"
+      ],
+      "supersedes": "assess-manual-v1"
+    },
+    {
+      "assessment_id": "assess-sandbox-v2",
+      "criterion_confidence": {
+        "affordability": 0.88,
+        "evidence": 0.88,
+        "fairness": 0.88,
+        "resilience": 0.88,
+        "reversibility": 0.88,
+        "value": 0.88
+      },
+      "distributional_scores": {
+        "analysts": 70,
+        "leaders": 55,
+        "security": 78
+      },
+      "gates": {
+        "budget": "pass",
+        "legal": "pass",
+        "privacy": "pass",
+        "safety": "pass"
+      },
+      "option_id": "opt-sandbox",
+      "recorded_at": "2026-08-22T09:05:00Z",
+      "scenario_scores": {
+        "base": {
+          "affordability": 42,
+          "evidence": 90,
+          "fairness": 74,
+          "resilience": 76,
+          "reversibility": 88,
+          "value": 66
+        },
+        "disruption": {
+          "affordability": 22,
+          "evidence": 84,
+          "fairness": 58,
+          "resilience": 62,
+          "reversibility": 88,
+          "value": 42
+        },
+        "downside": {
+          "affordability": 28,
+          "evidence": 88,
+          "fairness": 66,
+          "resilience": 68,
+          "reversibility": 90,
+          "value": 50
+        },
+        "upside": {
+          "affordability": 50,
+          "evidence": 88,
+          "fairness": 78,
+          "resilience": 80,
+          "reversibility": 88,
+          "value": 74
+        }
+      },
+      "source_ids": [
+        "src-integration-postmortem",
+        "src-security-review",
+        "src-user-study"
+      ],
+      "supersedes": "assess-sandbox-v1"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumption_id": "asm-integration-v2",
+      "confidence": 0.88,
+      "dependencies": [],
+      "falsifiers": [
+        "Observed value leaves the declared range for integration-hours."
+      ],
+      "lineage_id": "integration-hours",
+      "monitor": {
+        "cadence": "monthly",
+        "metric": "integration-hours",
+        "owner": "decision-owner",
+        "trigger": "outside declared range"
+      },
+      "recorded_at": "2026-08-21T10:00:00Z",
+      "statement": "Updated integration and governance effort.",
+      "supersedes": "asm-integration-v1",
+      "valid_from": "2026-08-21T10:00:00Z",
+      "valid_until": null,
+      "value": {
+        "base": 110,
+        "high": 160,
+        "low": 70,
+        "unit": "hours"
+      }
+    },
+    {
+      "assumption_id": "asm-time-saved-v1",
+      "confidence": 0.64,
+      "dependencies": [],
+      "falsifiers": [
+        "Observed value leaves the declared range for time-saved."
+      ],
+      "lineage_id": "time-saved",
+      "monitor": {
+        "cadence": "monthly",
+        "metric": "time-saved",
+        "owner": "decision-owner",
+        "trigger": "outside declared range"
+      },
+      "recorded_at": "2026-04-21T10:00:00Z",
+      "statement": "Analyst hours saved per week.",
+      "supersedes": null,
+      "valid_from": "2026-04-21T10:00:00Z",
+      "valid_until": null,
+      "value": {
+        "base": 8,
+        "high": 14,
+        "low": 3,
+        "unit": "hours/week"
+      }
+    }
+  ],
+  "case_id": "synthetic-research-agent-adoption",
+  "claims": [
+    {
+      "certainty": "confirmed",
+      "claim_id": "claim-agent-overhead",
+      "claim_type": "fact",
+      "consequence": "medium",
+      "contradict_source_ids": [],
+      "not_proven": [
+        "Does not establish performance in a real organization."
+      ],
+      "qualification_source_ids": [],
+      "recorded_at": "2026-08-21T12:00:00Z",
+      "scope": "synthetic case only",
+      "statement": "Later evidence shows integration overhead above the original central estimate.",
+      "support_source_ids": [
+        "src-integration-postmortem"
+      ],
+      "used_for_decision": false
+    },
+    {
+      "certainty": "confirmed",
+      "claim_id": "claim-agent-risk",
+      "claim_type": "fact",
+      "consequence": "high",
+      "contradict_source_ids": [],
+      "not_proven": [
+        "Does not prove every autonomous deployment is unsafe."
+      ],
+      "qualification_source_ids": [],
+      "recorded_at": "2026-04-20T12:10:00Z",
+      "scope": "synthetic case only",
+      "statement": "Full autonomous access creates a materially larger permission surface.",
+      "support_source_ids": [
+        "src-security-review",
+        "src-agent-eval"
+      ],
+      "used_for_decision": true
+    },
+    {
+      "certainty": "confirmed",
+      "claim_id": "claim-agent-value",
+      "claim_type": "fact",
+      "consequence": "high",
+      "contradict_source_ids": [],
+      "not_proven": [
+        "Does not prove organization-wide productivity or safe autonomous execution."
+      ],
+      "qualification_source_ids": [],
+      "recorded_at": "2026-04-20T12:00:00Z",
+      "scope": "synthetic case only",
+      "statement": "A bounded sandbox pilot can reduce repetitive research work.",
+      "support_source_ids": [
+        "src-agent-eval",
+        "src-user-study"
+      ],
+      "used_for_decision": true
+    }
+  ],
+  "cutoff": "2026-09-01T18:00:00Z",
+  "decision": {
+    "action": {
+      "executed": false,
+      "execution_receipt": null,
+      "external": false
+    },
+    "approval_roles": [
+      "research-owner",
+      "security-reviewer"
+    ],
+    "decision_cutoff": "2026-04-30T17:00:00Z",
+    "decision_id": "decision-agent-001",
+    "override": null,
+    "rationale": "A bounded sandbox pilot captures learning value while preserving approval and isolation boundaries.",
+    "rationale_recorded_at": "2026-04-30T16:40:00Z",
+    "rationale_source_ids": [
+      "src-agent-eval",
+      "src-security-review",
+      "src-user-study"
+    ],
+    "recorded_at": "2026-04-30T16:50:00Z",
+    "required_approval_roles": [
+      "research-owner",
+      "security-reviewer"
+    ],
+    "rule_digest": "sha256:8eb30d66ec54f10859d9e87da59bd36f8ffea3cfbf84cc4ff2d7f52ce4f256fe",
+    "rule_version_id": "rule-agent-v1",
+    "selected_option_id": "opt-sandbox"
+  },
+  "decision_rules": [
+    {
+      "change_control": {
+        "locked": true,
+        "owner": "decision-governance",
+        "prospective_only": true
+      },
+      "criteria_weights": {
+        "affordability": 0.15,
+        "evidence": 0.15,
+        "fairness": 0.1,
+        "resilience": 0.2,
+        "reversibility": 0.15,
+        "value": 0.25
+      },
+      "distributional_floor": 35,
+      "effective_from": "2026-04-25T10:00:00Z",
+      "hard_gate_ids": [
+        "legal",
+        "privacy",
+        "budget",
+        "safety"
+      ],
+      "recorded_at": "2026-04-25T10:00:00Z",
+      "robust_weights": {
+        "base": 0.2,
+        "expected": 0.4,
+        "regret": 0.15,
+        "worst": 0.25
+      },
+      "rule_digest": "sha256:8eb30d66ec54f10859d9e87da59bd36f8ffea3cfbf84cc4ff2d7f52ce4f256fe",
+      "rule_id": "robust-mcda",
+      "rule_version_id": "rule-agent-v1",
+      "supersedes": null,
+      "tie_break": [
+        "fully-resolved-gates",
+        "higher-robust-score",
+        "higher-worst-score",
+        "lower-max-regret",
+        "option-id"
+      ]
+    },
+    {
+      "change_control": {
+        "locked": true,
+        "owner": "decision-governance",
+        "prospective_only": true
+      },
+      "criteria_weights": {
+        "affordability": 0.1,
+        "evidence": 0.18,
+        "fairness": 0.12,
+        "resilience": 0.22,
+        "reversibility": 0.18,
+        "value": 0.2
+      },
+      "distributional_floor": 35,
+      "effective_from": "2026-08-25T10:00:00Z",
+      "hard_gate_ids": [
+        "legal",
+        "privacy",
+        "budget",
+        "safety"
+      ],
+      "recorded_at": "2026-08-25T10:00:00Z",
+      "robust_weights": {
+        "base": 0.2,
+        "expected": 0.4,
+        "regret": 0.15,
+        "worst": 0.25
+      },
+      "rule_digest": "sha256:af10fadef89034efa47989342178e8964b41536bf3c8ae6d76dc5ade60c49611",
+      "rule_id": "robust-mcda",
+      "rule_version_id": "rule-agent-v2",
+      "supersedes": "rule-agent-v1",
+      "tie_break": [
+        "fully-resolved-gates",
+        "higher-robust-score",
+        "higher-worst-score",
+        "lower-max-regret",
+        "option-id"
+      ]
+    }
+  ],
+  "forecasts": [
+    {
+      "forecast_id": "forecast-time-saved",
+      "interval": {
+        "confidence": 0.8,
+        "lower": 3,
+        "point": 8,
+        "upper": 14
+      },
+      "issued_at": "2026-04-22T09:00:00Z",
+      "metric": "hours-saved-per-week",
+      "outcome": {
+        "event": "medium",
+        "observed_at": "2026-08-15T12:00:00Z",
+        "value": 5
+      },
+      "probabilities": {
+        "high": 0.25,
+        "low": 0.25,
+        "medium": 0.5
+      },
+      "resolve_by": "2026-08-15T23:59:00Z"
+    }
+  ],
+  "freeze_metadata": {
+    "excluded_future_source_ids": [],
+    "known_claim_count": 3,
+    "known_forecast_count": 1,
+    "known_source_count": 4,
+    "outcome_count": 1,
+    "review_available": true
+  },
+  "options": [
+    {
+      "description": "Allow unattended account, filesystem, and publishing actions.",
+      "external_action": true,
+      "is_status_quo": false,
+      "option_id": "opt-autonomous",
+      "recorded_at": "2026-04-22T08:10:00Z",
+      "reversible": false,
+      "title": "Grant broad autonomous access"
+    },
+    {
+      "description": "Make no automation change.",
+      "external_action": false,
+      "is_status_quo": true,
+      "option_id": "opt-manual",
+      "recorded_at": "2026-04-22T08:00:00Z",
+      "reversible": true,
+      "title": "Retain manual research workflow"
+    },
+    {
+      "description": "Use read-only sources, isolated execution, and mandatory review.",
+      "external_action": false,
+      "is_status_quo": false,
+      "option_id": "opt-sandbox",
+      "recorded_at": "2026-04-22T08:05:00Z",
+      "reversible": true,
+      "title": "Run a bounded sandbox pilot"
+    }
+  ],
+  "outcomes": [
+    {
+      "metrics": {
+        "hours-saved-per-week": 5,
+        "integration-hours": 118
+      },
+      "observed_at": "2026-08-31T12:00:00Z",
+      "option_utilities": {
+        "opt-autonomous": 22,
+        "opt-manual": 82,
+        "opt-sandbox": 58
+      },
+      "outcome_id": "outcome-agent-001",
+      "realized_scenario_id": "disruption"
+    }
+  ],
+  "public_boundary": {
+    "contains_credentials": false,
+    "contains_personal_data": false,
+    "external_actions_enabled": false,
+    "statement": "All organizations, people, values, evidence, decisions, and outcomes are fictional.",
+    "synthetic_only": true
+  },
+  "review": {
+    "assumption_updates": [
+      {
+        "from_assumption_id": "asm-integration-v1",
+        "lineage_id": "integration-hours",
+        "reason": "Observed setup and policy work exceeded the initial range.",
+        "to_assumption_id": "asm-integration-v2"
+      }
+    ],
+    "learning_actions": [
+      {
+        "action": "Require a two-week integration rehearsal before any future pilot decision.",
+        "action_id": "learn-agent-1",
+        "due_at": "2026-10-15T17:00:00Z",
+        "owner": "research-governance"
+      }
+    ],
+    "prospective_rule_changes": [
+      {
+        "change_id": "rule-change-evidence",
+        "description": "Increase evidence and reversibility weights for future agent adoption decisions.",
+        "effective_from": "2026-08-25T10:00:00Z",
+        "prospective_only": true
+      }
+    ],
+    "reviewed_at": "2026-09-01T18:00:00Z",
+    "surprises": [
+      {
+        "description": "Integration and governance effort exceeded the original upper planning range.",
+        "severity": "high",
+        "surprise_id": "surprise-integration"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "description": "Central synthetic planning assumptions.",
+      "is_base": true,
+      "probability": 0.45,
+      "scenario_id": "base",
+      "title": "Base case"
+    },
+    {
+      "description": "Demand and execution conditions improve.",
+      "is_base": false,
+      "probability": 0.2,
+      "scenario_id": "upside",
+      "title": "Upside"
+    },
+    {
+      "description": "Demand or benefits underperform.",
+      "is_base": false,
+      "probability": 0.25,
+      "scenario_id": "downside",
+      "title": "Downside"
+    },
+    {
+      "description": "Implementation disruption and cost pressure.",
+      "is_base": false,
+      "probability": 0.1,
+      "scenario_id": "disruption",
+      "title": "Disruption"
+    }
+  ],
+  "schema_version": 1,
+  "snapshot_fingerprint": "sha256:361c854d9ad15680efc91ba2aaa20d2224684ac1b71bbd582df1c4361efe50de",
+  "sources": [
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:e359e8b71f50c876b2c2d781eeecdd2e07fdfb83845a161e8b382f7bd7cbe22c",
+      "effective_at": null,
+      "independence_group": "independent-eval",
+      "license": "CC0-1.0",
+      "lineage_id": "agent-evaluation",
+      "observed_at": "2026-04-12T11:00:00Z",
+      "published_at": "2026-04-12T09:00:00Z",
+      "publisher": "Independent Evaluation Cell",
+      "source_id": "src-agent-eval",
+      "source_type": "synthetic-record",
+      "summary": "The bounded agent improves evidence collection speed in a disposable environment.",
+      "supersedes": null,
+      "title": "Synthetic sandbox evaluation",
+      "version": "1.0"
+    },
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:1b2de7276aba3bb5f285eb25487f3b713d401ed3d08e7918a4813ea141a5841d",
+      "effective_at": null,
+      "independence_group": "independent-eval",
+      "license": "CC0-1.0",
+      "lineage_id": "integration-postmortem",
+      "observed_at": "2026-08-20T11:00:00Z",
+      "published_at": "2026-08-20T09:00:00Z",
+      "publisher": "Independent Evaluation Cell",
+      "source_id": "src-integration-postmortem",
+      "source_type": "synthetic-record",
+      "summary": "Unexpected integration overhead reduced realized pilot utility.",
+      "supersedes": null,
+      "title": "Synthetic integration postmortem",
+      "version": "1.0"
+    },
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:4baac8c4a787163f1d3d30f400a001826accf3d9d2e219b4a5306d00012633c6",
+      "effective_at": null,
+      "independence_group": "security-office",
+      "license": "CC0-1.0",
+      "lineage_id": "security-review",
+      "observed_at": "2026-04-15T11:00:00Z",
+      "published_at": "2026-04-15T09:00:00Z",
+      "publisher": "Fictional Security Office",
+      "source_id": "src-security-review",
+      "source_type": "synthetic-record",
+      "summary": "The full-autonomy option exposes unacceptable write and secret-access surfaces.",
+      "supersedes": null,
+      "title": "Synthetic security review",
+      "version": "1.0"
+    },
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:4e54627e3e783399508481ccab0631d3e21c1c6724b11707cd4441fa2e1b273f",
+      "effective_at": null,
+      "independence_group": "research-institute",
+      "license": "CC0-1.0",
+      "lineage_id": "user-study",
+      "observed_at": "2026-04-18T11:00:00Z",
+      "published_at": "2026-04-18T09:00:00Z",
+      "publisher": "Fictional Research Institute",
+      "source_id": "src-user-study",
+      "source_type": "synthetic-record",
+      "summary": "Analysts gain from bounded automation but require review and citation controls.",
+      "supersedes": null,
+      "title": "Synthetic analyst workflow study",
+      "version": "1.0"
+    }
+  ],
+  "title": "Synthetic adoption decision for a research automation agent"
+}

@@ -1,0 +1,4 @@
+case_id,selected_option_id,recorded_match,process_score,process_level,quadrant,ex_post_regret,evidence_flip,rule_flip
+synthetic-capacity-expansion,opt-phased,true,96.0,exemplary,sound-and-fortunate,0.0,false,false
+synthetic-public-service-pilot,opt-bounded-pilot,true,96.0,exemplary,sound-and-fortunate,0.0,false,false
+synthetic-research-agent-adoption,opt-sandbox,true,96.0,exemplary,sound-but-unlucky,24.0,true,false

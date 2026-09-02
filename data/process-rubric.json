@@ -1,0 +1,172 @@
+{
+  "dimensions": [
+    {
+      "checks": [
+        "cutoff-complete",
+        "no-future-evidence",
+        "correct-vintage",
+        "rationale-timely"
+      ],
+      "id": "temporal-integrity",
+      "weight": 20
+    },
+    {
+      "checks": [
+        "source-identity",
+        "content-hashes",
+        "access-rights",
+        "independence-groups"
+      ],
+      "id": "provenance-quality",
+      "weight": 14
+    },
+    {
+      "checks": [
+        "claim-support",
+        "consequence-corroboration",
+        "certainty-boundary",
+        "not-proven-boundary"
+      ],
+      "id": "claim-discipline",
+      "weight": 14
+    },
+    {
+      "checks": [
+        "assumption-ranges",
+        "forecast-intervals",
+        "scenario-probabilities",
+        "confidence-explicit"
+      ],
+      "id": "uncertainty-honesty",
+      "weight": 11
+    },
+    {
+      "checks": [
+        "status-quo-option",
+        "reversible-option",
+        "assessment-coverage",
+        "distributional-scores"
+      ],
+      "id": "option-completeness",
+      "weight": 10
+    },
+    {
+      "checks": [
+        "weights-normalized",
+        "robust-weights-normalized",
+        "tie-break-explicit",
+        "rule-locked"
+      ],
+      "id": "decision-rule-transparency",
+      "weight": 10
+    },
+    {
+      "checks": [
+        "approvals-complete",
+        "external-action-boundary",
+        "override-documented"
+      ],
+      "id": "approval-and-action-safety",
+      "weight": 8
+    },
+    {
+      "checks": [
+        "groups-declared",
+        "floor-enforced"
+      ],
+      "id": "distributional-awareness",
+      "weight": 5
+    },
+    {
+      "checks": [
+        "assumption-falsifiers",
+        "monitors-assigned",
+        "review-timely",
+        "learning-actions"
+      ],
+      "id": "monitoring-and-learning",
+      "weight": 8
+    }
+  ],
+  "hard_gates": [
+    {
+      "description": "No source, claim, assumption, assessment, rule, or rationale may enter a decision snapshot after the cutoff.",
+      "id": "no-future-information"
+    },
+    {
+      "description": "A decision must use the latest source vintage that was actually known by the cutoff.",
+      "id": "vintage-integrity"
+    },
+    {
+      "description": "The recorded rule digest must bind the rule that existed when the decision was made.",
+      "id": "rule-immutability"
+    },
+    {
+      "description": "Every required approval role must be present before an approved decision or external action.",
+      "id": "approval-integrity"
+    },
+    {
+      "description": "An external action cannot be reported executed without explicit approval and a verifiable execution receipt.",
+      "id": "external-action-safety"
+    },
+    {
+      "description": "Assumption dependency graphs must be acyclic and reference valid assumptions.",
+      "id": "graph-integrity"
+    },
+    {
+      "description": "High-consequence confirmed claims require at least two independent evidence groups.",
+      "id": "high-consequence-corroboration"
+    },
+    {
+      "description": "Decision rationale must have been recorded no later than the decision cutoff.",
+      "id": "hindsight-rationale-boundary"
+    }
+  ],
+  "outcome_quadrants": {
+    "lucky-but-fragile": {
+      "maximum_process_score_exclusive": 80,
+      "maximum_regret": 10
+    },
+    "poor-process-poor-outcome": {
+      "maximum_process_score_exclusive": 80,
+      "minimum_regret_exclusive": 10
+    },
+    "sound-and-fortunate": {
+      "maximum_regret": 10,
+      "minimum_process_score": 80
+    },
+    "sound-but-unlucky": {
+      "minimum_process_score": 80,
+      "minimum_regret_exclusive": 10
+    }
+  },
+  "process_levels": [
+    {
+      "label": "exemplary",
+      "minimum_score": 92,
+      "required_gate_status": "pass"
+    },
+    {
+      "label": "strong",
+      "minimum_score": 80,
+      "required_gate_status": "pass"
+    },
+    {
+      "label": "bounded",
+      "minimum_score": 65,
+      "required_gate_status": "pass"
+    },
+    {
+      "label": "limited",
+      "minimum_score": 40,
+      "required_gate_status": "pass"
+    },
+    {
+      "label": "unsafe",
+      "minimum_score": 0,
+      "required_gate_status": "any"
+    }
+  ],
+  "schema_version": 1,
+  "version": "0.1.0"
+}

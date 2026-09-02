@@ -1,0 +1,189 @@
+{
+  "$id": "https://github.com/JINGJAYHUANG/research-evidence-ledger/schemas/case.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "assessments": {
+      "items": {
+        "$ref": "assessment.schema.json"
+      },
+      "type": "array"
+    },
+    "assumptions": {
+      "items": {
+        "$ref": "assumption.schema.json"
+      },
+      "type": "array"
+    },
+    "case_as_of": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "case_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+      "type": "string"
+    },
+    "claims": {
+      "items": {
+        "$ref": "claim.schema.json"
+      },
+      "type": "array"
+    },
+    "decision": {
+      "type": "object"
+    },
+    "decision_rules": {
+      "items": {
+        "$ref": "decision-rule.schema.json"
+      },
+      "type": "array"
+    },
+    "forecasts": {
+      "items": {
+        "$ref": "forecast.schema.json"
+      },
+      "type": "array"
+    },
+    "options": {
+      "items": {
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "external_action": {
+            "type": "boolean"
+          },
+          "is_status_quo": {
+            "type": "boolean"
+          },
+          "option_id": {
+            "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+            "type": "string"
+          },
+          "recorded_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "reversible": {
+            "type": "boolean"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "option_id",
+          "title",
+          "recorded_at",
+          "description",
+          "reversible",
+          "external_action",
+          "is_status_quo"
+        ],
+        "type": "object"
+      },
+      "minItems": 2,
+      "type": "array"
+    },
+    "outcomes": {
+      "type": "array"
+    },
+    "public_boundary": {
+      "properties": {
+        "contains_credentials": {
+          "const": false
+        },
+        "contains_personal_data": {
+          "const": false
+        },
+        "external_actions_enabled": {
+          "const": false
+        },
+        "statement": {
+          "type": "string"
+        },
+        "synthetic_only": {
+          "const": true
+        }
+      },
+      "required": [
+        "synthetic_only",
+        "contains_personal_data",
+        "contains_credentials",
+        "external_actions_enabled",
+        "statement"
+      ],
+      "type": "object"
+    },
+    "review": {
+      "type": "object"
+    },
+    "scenarios": {
+      "items": {
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "is_base": {
+            "type": "boolean"
+          },
+          "probability": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number"
+          },
+          "scenario_id": {
+            "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "scenario_id",
+          "title",
+          "probability",
+          "is_base",
+          "description"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "sources": {
+      "items": {
+        "$ref": "source.schema.json"
+      },
+      "type": "array"
+    },
+    "title": {
+      "minLength": 8,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "case_id",
+    "title",
+    "case_as_of",
+    "public_boundary",
+    "sources",
+    "claims",
+    "assumptions",
+    "forecasts",
+    "scenarios",
+    "options",
+    "assessments",
+    "decision_rules",
+    "decision",
+    "outcomes",
+    "review"
+  ],
+  "title": "Research Evidence Ledger case",
+  "type": "object"
+}

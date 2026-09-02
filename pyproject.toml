@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-evidence-ledger"
+version = "0.1.0"
+description = "Point-in-time evidence, decision replay, outcome review, and learning for auditable decision systems."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "JINGJAYHUANG"}]
+keywords = [
+  "decision-intelligence",
+  "evidence",
+  "provenance",
+  "point-in-time",
+  "decision-journal",
+  "audit",
+  "forecasting",
+  "reproducible-research",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+[project.scripts]
+rel = "research_evidence_ledger.cli:main"
+
+[project.urls]
+Repository = "https://github.com/JINGJAYHUANG/research-evidence-ledger"
+Issues = "https://github.com/JINGJAYHUANG/research-evidence-ledger/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+research_evidence_ledger = ["data/*.json"]

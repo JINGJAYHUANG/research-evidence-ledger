@@ -1,0 +1,11 @@
+{
+  "authorship_proof": false,
+  "checkpoint_hash": "sha256:b0661423b190bed0095ea6b96938c65a4e3bf0872de4bee3538cdc89d184cc8f",
+  "external_timestamp_proof": false,
+  "first_hash": "sha256:ca18d6b9fadd0c674703a40fe16b05bb11971727acb9d9bab829f2cbc32a1a64",
+  "last_hash": "sha256:b069360aa9624d3b6fd4bad3946ba85c6510dffd64744b083c18860809acb709",
+  "merkle_root": "sha256:f656a47133e8f2932378492aabe01b25816530c818599a816dfe8ad57026d5e5",
+  "record_count": 4,
+  "schema_version": 1,
+  "signature_status": "unsigned-fixture"
+}

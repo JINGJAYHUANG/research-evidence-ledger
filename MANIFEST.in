@@ -1,0 +1,6 @@
+include README.md LICENSE SECURITY.md CONTRIBUTING.md CHANGELOG.md ROADMAP.md
+recursive-include src/research_evidence_ledger/data *.json
+recursive-include data *.json
+recursive-include examples *.json *.jsonl *.md *.html *.csv
+recursive-include schemas *.json
+recursive-include docs *.md

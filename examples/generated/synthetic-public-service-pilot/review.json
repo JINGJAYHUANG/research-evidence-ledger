@@ -1,0 +1,58 @@
+{
+  "assumption_updates": [],
+  "best_ex_post_option_id": "opt-bounded-pilot",
+  "best_ex_post_utility": 86.0,
+  "case_id": "synthetic-public-service-pilot",
+  "claim_boundary": "A favorable outcome does not prove a sound process, and an unfavorable outcome does not prove a poor process. The quadrant separates decision quality from realized luck in this synthetic case.",
+  "decision_cutoff": "2026-05-31T17:00:00Z",
+  "decision_quality_quadrant": "sound-and-fortunate",
+  "decision_snapshot_fingerprint": "sha256:592826a52a75a012cf3d32cf4fcb730330b7e75ec59f8612a6fe3a9c26754be1",
+  "ex_post_regret": 0.0,
+  "forecast_evaluation": {
+    "evaluated_forecast_count": 1,
+    "forecasts": [
+      {
+        "actual": 16.0,
+        "forecast_id": "forecast-wait-reduction",
+        "interval_hit": true,
+        "metric": "wait-time-reduction-percent",
+        "point_error": 2.0,
+        "realized_event": "near-target",
+        "realized_event_probability": 0.5
+      }
+    ],
+    "interval_coverage": 1.0,
+    "mean_squared_error": 4.0,
+    "multiclass_brier_score": 0.38
+  },
+  "learning_actions": [
+    {
+      "action": "Add accessibility workload as an explicit criterion in the next review.",
+      "action_id": "learn-public-1",
+      "due_at": "2026-10-31T17:00:00Z",
+      "owner": "service-evaluation"
+    }
+  ],
+  "learning_completeness": {
+    "assumption_updates_recorded": false,
+    "learning_actions_assigned": true,
+    "rule_changes_prospective": true,
+    "surprises_recorded": true
+  },
+  "process_level": "exemplary",
+  "process_score": 96.0,
+  "prospective_rule_changes": [],
+  "review_fingerprint": "sha256:8bf5752c96a3f8d0691e7a5ca22744238104741fe129c3c534c4e4dc535c4aef",
+  "review_snapshot_fingerprint": "sha256:75cf71325c4ccbd81f375eaa8ad6e92332ad720565a52fa1d0fd9fc76df7daee",
+  "reviewed_at": "2026-09-01T19:00:00Z",
+  "schema_version": 1,
+  "selected_ex_post_utility": 86.0,
+  "selected_option_id": "opt-bounded-pilot",
+  "surprises": [
+    {
+      "description": "Accessibility support required more staff time than expected but remained within the pilot boundary.",
+      "severity": "medium",
+      "surprise_id": "surprise-accessibility"
+    }
+  ]
+}

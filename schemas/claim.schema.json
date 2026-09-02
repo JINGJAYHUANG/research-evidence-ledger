@@ -1,0 +1,98 @@
+{
+  "$id": "https://github.com/JINGJAYHUANG/research-evidence-ledger/schemas/claim.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "certainty": {
+      "enum": [
+        "confirmed",
+        "inferred",
+        "conditional",
+        "unknown"
+      ]
+    },
+    "claim_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+      "type": "string"
+    },
+    "claim_type": {
+      "enum": [
+        "fact",
+        "inference",
+        "forecast",
+        "scenario",
+        "policy",
+        "decision",
+        "scope-finding"
+      ]
+    },
+    "consequence": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "contradict_source_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "not_proven": {
+      "items": {
+        "minLength": 8,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "qualification_source_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "recorded_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "scope": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "statement": {
+      "minLength": 12,
+      "type": "string"
+    },
+    "support_source_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "used_for_decision": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "claim_id",
+    "statement",
+    "recorded_at",
+    "claim_type",
+    "certainty",
+    "consequence",
+    "scope",
+    "used_for_decision",
+    "support_source_ids",
+    "contradict_source_ids",
+    "qualification_source_ids",
+    "not_proven"
+  ],
+  "title": "Evidence-linked claim",
+  "type": "object"
+}
