@@ -1,0 +1,54 @@
+{
+  "$id": "https://github.com/JINGJAYHUANG/research-evidence-ledger/schemas/checkpoint.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authorship_proof": {
+      "const": false
+    },
+    "checkpoint_hash": {
+      "type": "string"
+    },
+    "external_timestamp_proof": {
+      "const": false
+    },
+    "first_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "last_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "merkle_root": {
+      "type": "string"
+    },
+    "record_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "signature_status": {
+      "const": "unsigned-fixture"
+    }
+  },
+  "required": [
+    "schema_version",
+    "record_count",
+    "first_hash",
+    "last_hash",
+    "merkle_root",
+    "signature_status",
+    "authorship_proof",
+    "external_timestamp_proof",
+    "checkpoint_hash"
+  ],
+  "title": "Unsigned Merkle checkpoint",
+  "type": "object"
+}

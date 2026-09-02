@@ -1,0 +1,130 @@
+{
+  "$id": "https://github.com/JINGJAYHUANG/research-evidence-ledger/schemas/decision-rule.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "change_control": {
+      "properties": {
+        "locked": {
+          "const": true
+        },
+        "owner": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "prospective_only": {
+          "const": true
+        }
+      },
+      "required": [
+        "locked",
+        "prospective_only",
+        "owner"
+      ],
+      "type": "object"
+    },
+    "criteria_weights": {
+      "additionalProperties": {
+        "maximum": 1,
+        "minimum": 0,
+        "type": "number"
+      },
+      "minProperties": 1,
+      "type": "object"
+    },
+    "distributional_floor": {
+      "maximum": 100,
+      "minimum": 0,
+      "type": "number"
+    },
+    "effective_from": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "hard_gate_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "recorded_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "robust_weights": {
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "expected": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "regret": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "worst": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "base",
+        "expected",
+        "worst",
+        "regret"
+      ],
+      "type": "object"
+    },
+    "rule_digest": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "rule_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+      "type": "string"
+    },
+    "rule_version_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+      "type": "string"
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tie_break": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "rule_version_id",
+    "rule_id",
+    "recorded_at",
+    "effective_from",
+    "supersedes",
+    "criteria_weights",
+    "robust_weights",
+    "hard_gate_ids",
+    "distributional_floor",
+    "tie_break",
+    "change_control",
+    "rule_digest"
+  ],
+  "title": "Versioned decision rule",
+  "type": "object"
+}

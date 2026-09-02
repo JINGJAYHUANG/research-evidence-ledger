@@ -1,0 +1,300 @@
+{
+  "actual_failed_hard_gates": [
+    "graph-integrity"
+  ],
+  "case_id": "mutant-assumption-cycle",
+  "expected_failed_hard_gates": [
+    "graph-integrity"
+  ],
+  "matches_expected": true,
+  "process_assessment": {
+    "case_id": "mutant-assumption-cycle",
+    "check_values": {
+      "access-rights": true,
+      "approvals-complete": true,
+      "assessment-coverage": true,
+      "assumption-falsifiers": true,
+      "assumption-ranges": true,
+      "certainty-boundary": true,
+      "claim-support": true,
+      "confidence-explicit": true,
+      "consequence-corroboration": true,
+      "content-hashes": true,
+      "correct-vintage": true,
+      "cutoff-complete": true,
+      "distributional-scores": true,
+      "external-action-boundary": true,
+      "floor-enforced": true,
+      "forecast-intervals": true,
+      "groups-declared": true,
+      "independence-groups": true,
+      "learning-actions": false,
+      "monitors-assigned": true,
+      "no-future-evidence": true,
+      "not-proven-boundary": true,
+      "override-documented": true,
+      "rationale-timely": true,
+      "reversible-option": true,
+      "review-timely": false,
+      "robust-weights-normalized": true,
+      "rule-locked": true,
+      "scenario-probabilities": true,
+      "source-identity": true,
+      "status-quo-option": true,
+      "tie-break-explicit": true,
+      "weights-normalized": true
+    },
+    "claim_boundary": "The score describes the completeness and integrity of this synthetic decision record. It is not a certification that the decision was correct or that a real system is safe.",
+    "cutoff": "2026-03-31T17:00:00Z",
+    "dimensions": [
+      {
+        "checks": [
+          {
+            "id": "cutoff-complete",
+            "passed": true
+          },
+          {
+            "id": "no-future-evidence",
+            "passed": true
+          },
+          {
+            "id": "correct-vintage",
+            "passed": true
+          },
+          {
+            "id": "rationale-timely",
+            "passed": true
+          }
+        ],
+        "dimension_id": "temporal-integrity",
+        "earned": 20.0,
+        "score": 100.0,
+        "weight": 20
+      },
+      {
+        "checks": [
+          {
+            "id": "source-identity",
+            "passed": true
+          },
+          {
+            "id": "content-hashes",
+            "passed": true
+          },
+          {
+            "id": "access-rights",
+            "passed": true
+          },
+          {
+            "id": "independence-groups",
+            "passed": true
+          }
+        ],
+        "dimension_id": "provenance-quality",
+        "earned": 14.0,
+        "score": 100.0,
+        "weight": 14
+      },
+      {
+        "checks": [
+          {
+            "id": "claim-support",
+            "passed": true
+          },
+          {
+            "id": "consequence-corroboration",
+            "passed": true
+          },
+          {
+            "id": "certainty-boundary",
+            "passed": true
+          },
+          {
+            "id": "not-proven-boundary",
+            "passed": true
+          }
+        ],
+        "dimension_id": "claim-discipline",
+        "earned": 14.0,
+        "score": 100.0,
+        "weight": 14
+      },
+      {
+        "checks": [
+          {
+            "id": "assumption-ranges",
+            "passed": true
+          },
+          {
+            "id": "forecast-intervals",
+            "passed": true
+          },
+          {
+            "id": "scenario-probabilities",
+            "passed": true
+          },
+          {
+            "id": "confidence-explicit",
+            "passed": true
+          }
+        ],
+        "dimension_id": "uncertainty-honesty",
+        "earned": 11.0,
+        "score": 100.0,
+        "weight": 11
+      },
+      {
+        "checks": [
+          {
+            "id": "status-quo-option",
+            "passed": true
+          },
+          {
+            "id": "reversible-option",
+            "passed": true
+          },
+          {
+            "id": "assessment-coverage",
+            "passed": true
+          },
+          {
+            "id": "distributional-scores",
+            "passed": true
+          }
+        ],
+        "dimension_id": "option-completeness",
+        "earned": 10.0,
+        "score": 100.0,
+        "weight": 10
+      },
+      {
+        "checks": [
+          {
+            "id": "weights-normalized",
+            "passed": true
+          },
+          {
+            "id": "robust-weights-normalized",
+            "passed": true
+          },
+          {
+            "id": "tie-break-explicit",
+            "passed": true
+          },
+          {
+            "id": "rule-locked",
+            "passed": true
+          }
+        ],
+        "dimension_id": "decision-rule-transparency",
+        "earned": 10.0,
+        "score": 100.0,
+        "weight": 10
+      },
+      {
+        "checks": [
+          {
+            "id": "approvals-complete",
+            "passed": true
+          },
+          {
+            "id": "external-action-boundary",
+            "passed": true
+          },
+          {
+            "id": "override-documented",
+            "passed": true
+          }
+        ],
+        "dimension_id": "approval-and-action-safety",
+        "earned": 8.0,
+        "score": 100.0,
+        "weight": 8
+      },
+      {
+        "checks": [
+          {
+            "id": "groups-declared",
+            "passed": true
+          },
+          {
+            "id": "floor-enforced",
+            "passed": true
+          }
+        ],
+        "dimension_id": "distributional-awareness",
+        "earned": 5.0,
+        "score": 100.0,
+        "weight": 5
+      },
+      {
+        "checks": [
+          {
+            "id": "assumption-falsifiers",
+            "passed": true
+          },
+          {
+            "id": "monitors-assigned",
+            "passed": true
+          },
+          {
+            "id": "review-timely",
+            "passed": false
+          },
+          {
+            "id": "learning-actions",
+            "passed": false
+          }
+        ],
+        "dimension_id": "monitoring-and-learning",
+        "earned": 4.0,
+        "score": 50.0,
+        "weight": 8
+      }
+    ],
+    "failed_hard_gates": [
+      "graph-integrity"
+    ],
+    "hard_gates": {
+      "approval-integrity": {
+        "details": [],
+        "status": "pass"
+      },
+      "external-action-safety": {
+        "details": [],
+        "status": "pass"
+      },
+      "graph-integrity": {
+        "details": [
+          "assumption dependency cycle: asm-demand-v1 -> asm-lead-time-v1 -> asm-demand-v1"
+        ],
+        "status": "fail"
+      },
+      "high-consequence-corroboration": {
+        "details": [],
+        "status": "pass"
+      },
+      "hindsight-rationale-boundary": {
+        "details": [],
+        "status": "pass"
+      },
+      "no-future-information": {
+        "details": [],
+        "status": "pass"
+      },
+      "rule-immutability": {
+        "details": [],
+        "status": "pass"
+      },
+      "vintage-integrity": {
+        "details": [],
+        "status": "pass"
+      }
+    },
+    "process_level": "unsafe",
+    "process_score": 96.0,
+    "schema_version": 1,
+    "snapshot_fingerprint": "sha256:14ff217bea2d466a84efc0f5a73981580e05f4ae8bd3503346c0e937d25c9849"
+  },
+  "schema_version": 1
+}

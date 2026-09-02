@@ -1,0 +1,55 @@
+{
+  "$id": "https://github.com/JINGJAYHUANG/research-evidence-ledger/schemas/artifact-manifest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "case_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "file_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "files": {
+      "additionalProperties": {
+        "properties": {
+          "bytes": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "sha256": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "bytes",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "generator": {
+      "type": "string"
+    },
+    "mutant_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "schema_version": {
+      "const": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "generator",
+    "case_count",
+    "mutant_count",
+    "file_count",
+    "files"
+  ],
+  "title": "Generated artifact manifest",
+  "type": "object"
+}

@@ -1,0 +1,105 @@
+{
+  "$id": "https://github.com/JINGJAYHUANG/research-evidence-ledger/schemas/source.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "access_class": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "authority": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "content_hash": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "effective_at": {
+      "oneOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "independence_group": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "license": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "lineage_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+      "type": "string"
+    },
+    "observed_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "published_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "publisher": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+      "type": "string"
+    },
+    "source_type": {
+      "enum": [
+        "synthetic-record",
+        "official-record",
+        "research",
+        "observation",
+        "model-output",
+        "other"
+      ]
+    },
+    "summary": {
+      "minLength": 12,
+      "type": "string"
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "version": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_id",
+    "lineage_id",
+    "version",
+    "title",
+    "source_type",
+    "publisher",
+    "published_at",
+    "observed_at",
+    "supersedes",
+    "independence_group",
+    "authority",
+    "access_class",
+    "license",
+    "summary",
+    "content_hash"
+  ],
+  "title": "Evidence source",
+  "type": "object"
+}

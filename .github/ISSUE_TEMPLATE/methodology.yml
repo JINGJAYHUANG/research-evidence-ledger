@@ -1,0 +1,22 @@
+name: Methodology proposal
+description: Propose a change to timestamps, scoring, gates, replay, or learning semantics.
+title: "methodology: "
+body:
+  - type: textarea
+    attributes:
+      label: Failure mode
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed invariant and fixtures
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Boundary
+      options:
+        - label: Uses synthetic or clearly public material only
+          required: true
+        - label: Does not rewrite a historical rule after outcomes
+          required: true

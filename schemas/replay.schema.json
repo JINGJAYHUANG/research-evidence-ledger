@@ -1,0 +1,78 @@
+{
+  "$id": "https://github.com/JINGJAYHUANG/research-evidence-ledger/schemas/replay.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "claim_boundary": {
+      "type": "string"
+    },
+    "cutoff": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "options": {
+      "type": "array"
+    },
+    "process_assessment": {
+      "type": "object"
+    },
+    "recorded_decision_matches_replay": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "recorded_option_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "replay_fingerprint": {
+      "type": "string"
+    },
+    "rule_digest": {
+      "type": "string"
+    },
+    "rule_version_id": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "selected_option_id": {
+      "type": "string"
+    },
+    "selection_status": {
+      "enum": [
+        "selected",
+        "review-required",
+        "no-fully-eligible-option"
+      ]
+    },
+    "snapshot_fingerprint": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "case_id",
+    "cutoff",
+    "snapshot_fingerprint",
+    "rule_version_id",
+    "rule_digest",
+    "selection_status",
+    "selected_option_id",
+    "recorded_option_id",
+    "recorded_decision_matches_replay",
+    "options",
+    "process_assessment",
+    "claim_boundary",
+    "replay_fingerprint"
+  ],
+  "title": "Decision replay result",
+  "type": "object"
+}

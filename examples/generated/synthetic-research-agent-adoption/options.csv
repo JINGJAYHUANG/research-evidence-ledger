@@ -1,0 +1,4 @@
+option_id,title,robust_score,expected_score,worst_score,max_regret,eligible,failed_gates,unknown_gates
+opt-autonomous,Grant broad autonomous access,44.1893,46.292,27.212,44.518,False,distributional-floor;privacy;safety,legal
+opt-manual,Retain manual research workflow,70.7889,69.8973,64.76,14.432,True,,
+opt-sandbox,Run a bounded sandbox pilot,75.7524,74.5877,65.99,5.74,True,,

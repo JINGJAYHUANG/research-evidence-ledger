@@ -1,0 +1,133 @@
+{
+  "$id": "https://github.com/JINGJAYHUANG/research-evidence-ledger/schemas/assumption.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assumption_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+      "type": "string"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "dependencies": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "falsifiers": {
+      "items": {
+        "minLength": 8,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "lineage_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+      "type": "string"
+    },
+    "monitor": {
+      "additionalProperties": true,
+      "properties": {
+        "cadence": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "metric": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "trigger": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "owner",
+        "metric",
+        "cadence",
+        "trigger"
+      ],
+      "type": "object"
+    },
+    "recorded_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "statement": {
+      "minLength": 12,
+      "type": "string"
+    },
+    "supersedes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "valid_from": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "valid_until": {
+      "oneOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "value": {
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "type": "number"
+        },
+        "high": {
+          "type": "number"
+        },
+        "low": {
+          "type": "number"
+        },
+        "unit": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "low",
+        "base",
+        "high",
+        "unit"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "assumption_id",
+    "lineage_id",
+    "statement",
+    "recorded_at",
+    "valid_from",
+    "valid_until",
+    "supersedes",
+    "value",
+    "confidence",
+    "dependencies",
+    "falsifiers",
+    "monitor"
+  ],
+  "title": "Versioned decision assumption",
+  "type": "object"
+}

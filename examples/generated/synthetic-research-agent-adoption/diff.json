@@ -1,0 +1,89 @@
+{
+  "after_cutoff": "2026-09-01T18:00:00Z",
+  "after_snapshot_fingerprint": "sha256:361c854d9ad15680efc91ba2aaa20d2224684ac1b71bbd582df1c4361efe50de",
+  "before_cutoff": "2026-04-30T17:00:00Z",
+  "before_snapshot_fingerprint": "sha256:6e54432797bdc7f64dc527ae4e01b66f923f579f2de04536053ff64678d0d1c0",
+  "case_id": "synthetic-research-agent-adoption",
+  "changes": {
+    "assessments": {
+      "added": [
+        "assess-autonomous-v2",
+        "assess-manual-v2",
+        "assess-sandbox-v2"
+      ],
+      "changed": [],
+      "removed": [
+        "assess-autonomous-v1",
+        "assess-manual-v1",
+        "assess-sandbox-v1"
+      ]
+    },
+    "assumptions": {
+      "added": [
+        "asm-integration-v2"
+      ],
+      "changed": [],
+      "removed": [
+        "asm-integration-v1"
+      ]
+    },
+    "claims": {
+      "added": [
+        "claim-agent-overhead"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "decision_rules": {
+      "added": [
+        "rule-agent-v2"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "forecasts": {
+      "added": [],
+      "changed": [
+        {
+          "after_digest": "sha256:e53469b9460060a0c8ba9c40f3ab3ba10a2419e405dbb9ad3214f5312a72551d",
+          "before_digest": "sha256:9fc179d8ee50315091c22a7ec5221435b343f6e877d27a3bfc9cf8771d16aa4c",
+          "id": "forecast-time-saved"
+        }
+      ],
+      "removed": []
+    },
+    "outcomes": {
+      "added": [
+        "outcome-agent-001"
+      ],
+      "changed": [],
+      "removed": []
+    },
+    "sources": {
+      "added": [
+        "src-integration-postmortem"
+      ],
+      "changed": [],
+      "removed": []
+    }
+  },
+  "claim_boundary": "A decision flip shows sensitivity to new evidence or a prospective rule change. It does not prove that the later decision is universally correct.",
+  "counterfactuals": {
+    "decision_time_original_rule": {
+      "rule_version_id": "rule-agent-v1",
+      "selected_option_id": "opt-sandbox"
+    },
+    "later_evidence_latest_rule": {
+      "rule_version_id": "rule-agent-v2",
+      "selected_option_id": "opt-manual"
+    },
+    "later_evidence_original_rule": {
+      "rule_version_id": "rule-agent-v1",
+      "selected_option_id": "opt-manual"
+    }
+  },
+  "decision_flip_from_rule_change": false,
+  "decision_flip_with_new_evidence_same_rule": true,
+  "diff_fingerprint": "sha256:ae0d2e7f3481aba7d53f8473e6ba55451b40626ab7054441534d5cf558da444d",
+  "schema_version": 1
+}

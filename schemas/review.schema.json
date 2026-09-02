@@ -1,0 +1,83 @@
+{
+  "$id": "https://github.com/JINGJAYHUANG/research-evidence-ledger/schemas/review.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "best_ex_post_option_id": {
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "claim_boundary": {
+      "type": "string"
+    },
+    "decision_cutoff": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "decision_quality_quadrant": {
+      "enum": [
+        "sound-and-fortunate",
+        "sound-but-unlucky",
+        "lucky-but-fragile",
+        "poor-process-poor-outcome"
+      ]
+    },
+    "ex_post_regret": {
+      "minimum": 0,
+      "type": "number"
+    },
+    "forecast_evaluation": {
+      "type": "object"
+    },
+    "learning_completeness": {
+      "type": "object"
+    },
+    "process_level": {
+      "enum": [
+        "unsafe",
+        "limited",
+        "bounded",
+        "strong",
+        "exemplary"
+      ]
+    },
+    "process_score": {
+      "maximum": 100,
+      "minimum": 0,
+      "type": "number"
+    },
+    "review_fingerprint": {
+      "type": "string"
+    },
+    "reviewed_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "selected_option_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "case_id",
+    "reviewed_at",
+    "decision_cutoff",
+    "selected_option_id",
+    "best_ex_post_option_id",
+    "ex_post_regret",
+    "process_score",
+    "process_level",
+    "decision_quality_quadrant",
+    "forecast_evaluation",
+    "learning_completeness",
+    "claim_boundary",
+    "review_fingerprint"
+  ],
+  "title": "Outcome and learning review",
+  "type": "object"
+}

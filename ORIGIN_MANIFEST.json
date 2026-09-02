@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "project": "research-evidence-ledger",
+  "categories": {
+    "source_and_method": "original implementation and documentation",
+    "reference_cases": "fictional synthetic fixtures",
+    "adversarial_cases": "fictional synthetic mutations",
+    "generated_artifacts": "deterministically generated from committed fixtures",
+    "reference_shelf": "links and short metadata for public standards"
+  },
+  "excluded": [
+    "personal data",
+    "credentials",
+    "private decision records",
+    "proprietary source text",
+    "real organizations and outcomes",
+    "external action adapters"
+  ]
+}

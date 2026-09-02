@@ -1,0 +1,4 @@
+option_id,title,robust_score,expected_score,worst_score,max_regret,eligible,failed_gates,unknown_gates
+opt-bounded-pilot,Run an assistance-only bounded pilot,76.3208,74.4809,65.438,0.511,True,,
+opt-full-rollout,Automate final service decisions,42.3488,43.4603,24.625,41.324,False,distributional-floor;legal;privacy;safety,
+opt-status-quo,Retain the current process,68.2047,66.2216,63.366,15.435,False,distributional-floor,

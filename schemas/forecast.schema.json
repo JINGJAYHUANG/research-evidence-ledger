@@ -1,0 +1,102 @@
+{
+  "$id": "https://github.com/JINGJAYHUANG/research-evidence-ledger/schemas/forecast.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "forecast_id": {
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,127}$",
+      "type": "string"
+    },
+    "interval": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "lower": {
+          "type": "number"
+        },
+        "point": {
+          "type": "number"
+        },
+        "upper": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "lower",
+        "point",
+        "upper",
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "issued_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "metric": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "outcome": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "event": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "observed_at": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "value": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "observed_at",
+            "value",
+            "event"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "probabilities": {
+      "additionalProperties": {
+        "maximum": 1,
+        "minimum": 0,
+        "type": "number"
+      },
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "resolve_by": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "forecast_id",
+    "issued_at",
+    "resolve_by",
+    "metric",
+    "interval",
+    "probabilities",
+    "outcome"
+  ],
+  "title": "Point-in-time forecast",
+  "type": "object"
+}

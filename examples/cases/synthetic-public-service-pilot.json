@@ -1,0 +1,621 @@
+{
+  "assessments": [
+    {
+      "assessment_id": "assess-status-v1",
+      "criterion_confidence": {
+        "affordability": 0.82,
+        "evidence": 0.82,
+        "fairness": 0.82,
+        "resilience": 0.82,
+        "reversibility": 0.82,
+        "value": 0.82
+      },
+      "distributional_scores": {
+        "disabled-users": 42,
+        "general-users": 52,
+        "staff": 62
+      },
+      "gates": {
+        "budget": "pass",
+        "legal": "pass",
+        "privacy": "pass",
+        "safety": "pass"
+      },
+      "option_id": "opt-status-quo",
+      "recorded_at": "2026-05-24T09:00:00Z",
+      "scenario_scores": {
+        "base": {
+          "affordability": 82,
+          "evidence": 88,
+          "fairness": 52,
+          "resilience": 70,
+          "reversibility": 95,
+          "value": 42
+        },
+        "disruption": {
+          "affordability": 84,
+          "evidence": 88,
+          "fairness": 50,
+          "resilience": 72,
+          "reversibility": 95,
+          "value": 40
+        },
+        "downside": {
+          "affordability": 85,
+          "evidence": 90,
+          "fairness": 56,
+          "resilience": 76,
+          "reversibility": 95,
+          "value": 48
+        },
+        "upside": {
+          "affordability": 82,
+          "evidence": 85,
+          "fairness": 48,
+          "resilience": 66,
+          "reversibility": 95,
+          "value": 36
+        }
+      },
+      "source_ids": [
+        "src-service-baseline",
+        "src-community-input"
+      ],
+      "supersedes": null
+    },
+    {
+      "assessment_id": "assess-pilot-v1",
+      "criterion_confidence": {
+        "affordability": 0.83,
+        "evidence": 0.83,
+        "fairness": 0.83,
+        "resilience": 0.83,
+        "reversibility": 0.83,
+        "value": 0.83
+      },
+      "distributional_scores": {
+        "disabled-users": 76,
+        "general-users": 82,
+        "staff": 72
+      },
+      "gates": {
+        "budget": "pass",
+        "legal": "pass",
+        "privacy": "pass",
+        "safety": "pass"
+      },
+      "option_id": "opt-bounded-pilot",
+      "recorded_at": "2026-05-24T09:05:00Z",
+      "scenario_scores": {
+        "base": {
+          "affordability": 68,
+          "evidence": 86,
+          "fairness": 82,
+          "resilience": 84,
+          "reversibility": 90,
+          "value": 80
+        },
+        "disruption": {
+          "affordability": 50,
+          "evidence": 82,
+          "fairness": 68,
+          "resilience": 70,
+          "reversibility": 90,
+          "value": 58
+        },
+        "downside": {
+          "affordability": 58,
+          "evidence": 88,
+          "fairness": 76,
+          "resilience": 78,
+          "reversibility": 92,
+          "value": 68
+        },
+        "upside": {
+          "affordability": 72,
+          "evidence": 84,
+          "fairness": 86,
+          "resilience": 86,
+          "reversibility": 90,
+          "value": 88
+        }
+      },
+      "source_ids": [
+        "src-service-baseline",
+        "src-rights-review",
+        "src-pilot-eval",
+        "src-community-input"
+      ],
+      "supersedes": null
+    },
+    {
+      "assessment_id": "assess-rollout-v1",
+      "criterion_confidence": {
+        "affordability": 0.7,
+        "evidence": 0.7,
+        "fairness": 0.7,
+        "resilience": 0.7,
+        "reversibility": 0.7,
+        "value": 0.7
+      },
+      "distributional_scores": {
+        "disabled-users": 12,
+        "general-users": 60,
+        "staff": 75
+      },
+      "gates": {
+        "budget": "pass",
+        "legal": "fail",
+        "privacy": "fail",
+        "safety": "fail"
+      },
+      "option_id": "opt-full-rollout",
+      "recorded_at": "2026-05-24T09:10:00Z",
+      "scenario_scores": {
+        "base": {
+          "affordability": 75,
+          "evidence": 30,
+          "fairness": 28,
+          "resilience": 35,
+          "reversibility": 10,
+          "value": 92
+        },
+        "disruption": {
+          "affordability": 18,
+          "evidence": 18,
+          "fairness": 8,
+          "resilience": 8,
+          "reversibility": 3,
+          "value": 22
+        },
+        "downside": {
+          "affordability": 30,
+          "evidence": 22,
+          "fairness": 12,
+          "resilience": 15,
+          "reversibility": 5,
+          "value": 45
+        },
+        "upside": {
+          "affordability": 80,
+          "evidence": 32,
+          "fairness": 34,
+          "resilience": 42,
+          "reversibility": 8,
+          "value": 96
+        }
+      },
+      "source_ids": [
+        "src-rights-review",
+        "src-community-input"
+      ],
+      "supersedes": null
+    }
+  ],
+  "assumptions": [
+    {
+      "assumption_id": "asm-take-up-v1",
+      "confidence": 0.6,
+      "dependencies": [],
+      "falsifiers": [
+        "Observed value leaves the declared range for pilot-take-up."
+      ],
+      "lineage_id": "pilot-take-up",
+      "monitor": {
+        "cadence": "monthly",
+        "metric": "pilot-take-up",
+        "owner": "decision-owner",
+        "trigger": "outside declared range"
+      },
+      "recorded_at": "2026-05-21T10:00:00Z",
+      "statement": "Eligible users choosing the pilot channel.",
+      "supersedes": null,
+      "valid_from": "2026-05-21T10:00:00Z",
+      "valid_until": null,
+      "value": {
+        "base": 0.35,
+        "high": 0.55,
+        "low": 0.15,
+        "unit": "fraction"
+      }
+    },
+    {
+      "assumption_id": "asm-review-time-v1",
+      "confidence": 0.66,
+      "dependencies": [],
+      "falsifiers": [
+        "Observed value leaves the declared range for review-time."
+      ],
+      "lineage_id": "review-time",
+      "monitor": {
+        "cadence": "monthly",
+        "metric": "review-time",
+        "owner": "decision-owner",
+        "trigger": "outside declared range"
+      },
+      "recorded_at": "2026-05-21T10:10:00Z",
+      "statement": "Human review time per assisted case.",
+      "supersedes": null,
+      "valid_from": "2026-05-21T10:10:00Z",
+      "valid_until": null,
+      "value": {
+        "base": 14,
+        "high": 24,
+        "low": 8,
+        "unit": "minutes"
+      }
+    }
+  ],
+  "case_as_of": "2026-09-01T19:00:00Z",
+  "case_id": "synthetic-public-service-pilot",
+  "claims": [
+    {
+      "certainty": "confirmed",
+      "claim_id": "claim-service-problem",
+      "claim_type": "fact",
+      "consequence": "high",
+      "contradict_source_ids": [],
+      "not_proven": [
+        "Does not establish performance in a real organization."
+      ],
+      "qualification_source_ids": [],
+      "recorded_at": "2026-05-20T12:00:00Z",
+      "scope": "synthetic case only",
+      "statement": "The current synthetic service process has a material wait-time problem.",
+      "support_source_ids": [
+        "src-service-baseline",
+        "src-community-input"
+      ],
+      "used_for_decision": true
+    },
+    {
+      "certainty": "confirmed",
+      "claim_id": "claim-bounded-pilot",
+      "claim_type": "fact",
+      "consequence": "critical",
+      "contradict_source_ids": [],
+      "not_proven": [
+        "Does not prove the pilot is lawful or effective in any real jurisdiction."
+      ],
+      "qualification_source_ids": [],
+      "recorded_at": "2026-05-20T12:10:00Z",
+      "scope": "synthetic case only",
+      "statement": "A reversible assistance-only pilot can preserve human decision authority.",
+      "support_source_ids": [
+        "src-rights-review",
+        "src-pilot-eval"
+      ],
+      "used_for_decision": true
+    },
+    {
+      "certainty": "confirmed",
+      "claim_id": "claim-full-rollout-risk",
+      "claim_type": "fact",
+      "consequence": "critical",
+      "contradict_source_ids": [],
+      "not_proven": [
+        "Does not establish performance in a real organization."
+      ],
+      "qualification_source_ids": [],
+      "recorded_at": "2026-05-20T12:20:00Z",
+      "scope": "synthetic case only",
+      "statement": "Full automation would exceed the synthetic rights and evidence boundary.",
+      "support_source_ids": [
+        "src-rights-review",
+        "src-community-input"
+      ],
+      "used_for_decision": true
+    },
+    {
+      "certainty": "confirmed",
+      "claim_id": "claim-pilot-outcome",
+      "claim_type": "fact",
+      "consequence": "medium",
+      "contradict_source_ids": [],
+      "not_proven": [
+        "Does not establish performance in a real organization."
+      ],
+      "qualification_source_ids": [],
+      "recorded_at": "2026-08-26T12:00:00Z",
+      "scope": "synthetic case only",
+      "statement": "Later synthetic outcome evidence shows lower wait time under the bounded pilot.",
+      "support_source_ids": [
+        "src-pilot-outcome"
+      ],
+      "used_for_decision": false
+    }
+  ],
+  "decision": {
+    "action": {
+      "executed": false,
+      "execution_receipt": null,
+      "external": false
+    },
+    "approval_roles": [
+      "service-owner",
+      "rights-reviewer"
+    ],
+    "decision_cutoff": "2026-05-31T17:00:00Z",
+    "decision_id": "decision-public-001",
+    "override": null,
+    "rationale": "The bounded pilot is reversible, evaluation-ready, and preserves human authority and appeal.",
+    "rationale_recorded_at": "2026-05-31T16:40:00Z",
+    "rationale_source_ids": [
+      "src-service-baseline",
+      "src-rights-review",
+      "src-pilot-eval",
+      "src-community-input"
+    ],
+    "recorded_at": "2026-05-31T16:50:00Z",
+    "required_approval_roles": [
+      "service-owner",
+      "rights-reviewer"
+    ],
+    "rule_digest": "sha256:740845435842fbbc0ef5dfaf9a74e48a9bf2892816128a64238dc4d0017c2f08",
+    "rule_version_id": "rule-public-v1",
+    "selected_option_id": "opt-bounded-pilot"
+  },
+  "decision_rules": [
+    {
+      "change_control": {
+        "locked": true,
+        "owner": "decision-governance",
+        "prospective_only": true
+      },
+      "criteria_weights": {
+        "affordability": 0.15,
+        "evidence": 0.15,
+        "fairness": 0.1,
+        "resilience": 0.2,
+        "reversibility": 0.15,
+        "value": 0.25
+      },
+      "distributional_floor": 45,
+      "effective_from": "2026-05-25T10:00:00Z",
+      "hard_gate_ids": [
+        "legal",
+        "privacy",
+        "budget",
+        "safety"
+      ],
+      "recorded_at": "2026-05-25T10:00:00Z",
+      "robust_weights": {
+        "base": 0.2,
+        "expected": 0.4,
+        "regret": 0.15,
+        "worst": 0.25
+      },
+      "rule_digest": "sha256:740845435842fbbc0ef5dfaf9a74e48a9bf2892816128a64238dc4d0017c2f08",
+      "rule_id": "robust-mcda",
+      "rule_version_id": "rule-public-v1",
+      "supersedes": null,
+      "tie_break": [
+        "fully-resolved-gates",
+        "higher-robust-score",
+        "higher-worst-score",
+        "lower-max-regret",
+        "option-id"
+      ]
+    }
+  ],
+  "forecasts": [
+    {
+      "forecast_id": "forecast-wait-reduction",
+      "interval": {
+        "confidence": 0.8,
+        "lower": 5,
+        "point": 18,
+        "upper": 30
+      },
+      "issued_at": "2026-05-22T09:00:00Z",
+      "metric": "wait-time-reduction-percent",
+      "outcome": {
+        "event": "near-target",
+        "observed_at": "2026-08-24T12:00:00Z",
+        "value": 16
+      },
+      "probabilities": {
+        "above-target": 0.2,
+        "below-target": 0.3,
+        "near-target": 0.5
+      },
+      "resolve_by": "2026-08-24T23:59:00Z"
+    }
+  ],
+  "options": [
+    {
+      "description": "Continue the current human-only workflow.",
+      "external_action": false,
+      "is_status_quo": true,
+      "option_id": "opt-status-quo",
+      "recorded_at": "2026-05-22T08:00:00Z",
+      "reversible": true,
+      "title": "Retain the current process"
+    },
+    {
+      "description": "Use assistance for triage and drafting while retaining human decisions and appeal.",
+      "external_action": false,
+      "is_status_quo": false,
+      "option_id": "opt-bounded-pilot",
+      "recorded_at": "2026-05-22T08:05:00Z",
+      "reversible": true,
+      "title": "Run an assistance-only bounded pilot"
+    },
+    {
+      "description": "Replace human final decisions with an automated system.",
+      "external_action": true,
+      "is_status_quo": false,
+      "option_id": "opt-full-rollout",
+      "recorded_at": "2026-05-22T08:10:00Z",
+      "reversible": false,
+      "title": "Automate final service decisions"
+    }
+  ],
+  "outcomes": [
+    {
+      "metrics": {
+        "appeal-access-preserved": true,
+        "wait-time-reduction-percent": 16
+      },
+      "observed_at": "2026-08-30T12:00:00Z",
+      "option_utilities": {
+        "opt-bounded-pilot": 86,
+        "opt-full-rollout": 38,
+        "opt-status-quo": 55
+      },
+      "outcome_id": "outcome-public-001",
+      "realized_scenario_id": "base"
+    }
+  ],
+  "public_boundary": {
+    "contains_credentials": false,
+    "contains_personal_data": false,
+    "external_actions_enabled": false,
+    "statement": "All organizations, people, values, evidence, decisions, and outcomes are fictional.",
+    "synthetic_only": true
+  },
+  "review": {
+    "assumption_updates": [],
+    "learning_actions": [
+      {
+        "action": "Add accessibility workload as an explicit criterion in the next review.",
+        "action_id": "learn-public-1",
+        "due_at": "2026-10-31T17:00:00Z",
+        "owner": "service-evaluation"
+      }
+    ],
+    "prospective_rule_changes": [],
+    "reviewed_at": "2026-09-01T19:00:00Z",
+    "surprises": [
+      {
+        "description": "Accessibility support required more staff time than expected but remained within the pilot boundary.",
+        "severity": "medium",
+        "surprise_id": "surprise-accessibility"
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "description": "Central synthetic planning assumptions.",
+      "is_base": true,
+      "probability": 0.45,
+      "scenario_id": "base",
+      "title": "Base case"
+    },
+    {
+      "description": "Demand and execution conditions improve.",
+      "is_base": false,
+      "probability": 0.2,
+      "scenario_id": "upside",
+      "title": "Upside"
+    },
+    {
+      "description": "Demand or benefits underperform.",
+      "is_base": false,
+      "probability": 0.25,
+      "scenario_id": "downside",
+      "title": "Downside"
+    },
+    {
+      "description": "Implementation disruption and cost pressure.",
+      "is_base": false,
+      "probability": 0.1,
+      "scenario_id": "disruption",
+      "title": "Disruption"
+    }
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:368f124dab6fefc712d8ae4c4f67837e463ac137e4ca4b8621be7aef9f21169b",
+      "effective_at": null,
+      "independence_group": "service-office",
+      "license": "CC0-1.0",
+      "lineage_id": "service-baseline",
+      "observed_at": "2026-05-10T10:00:00Z",
+      "published_at": "2026-05-10T09:00:00Z",
+      "publisher": "Fictional Service Office",
+      "source_id": "src-service-baseline",
+      "source_type": "synthetic-record",
+      "summary": "The current process has long queues and uneven completion outcomes.",
+      "supersedes": null,
+      "title": "Synthetic service baseline",
+      "version": "1.0"
+    },
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:3c88a757986e1012a98d023b29e9299d519ce53ee1fa49de140c04e1d5a61859",
+      "effective_at": null,
+      "independence_group": "civic-panel",
+      "license": "CC0-1.0",
+      "lineage_id": "rights-review",
+      "observed_at": "2026-05-12T10:00:00Z",
+      "published_at": "2026-05-12T09:00:00Z",
+      "publisher": "Independent Civic Review Panel",
+      "source_id": "src-rights-review",
+      "source_type": "synthetic-record",
+      "summary": "Any pilot requires human review, appeal, accessibility, and non-automation of final eligibility decisions.",
+      "supersedes": null,
+      "title": "Synthetic rights and appeal review",
+      "version": "1.0"
+    },
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:80f149e8c2a58ec26e963677ccbdf61544ebf33c739575937fedd8663909472e",
+      "effective_at": null,
+      "independence_group": "evaluation-unit",
+      "license": "CC0-1.0",
+      "lineage_id": "pilot-evaluation",
+      "observed_at": "2026-05-15T10:00:00Z",
+      "published_at": "2026-05-15T09:00:00Z",
+      "publisher": "Independent Evaluation Unit",
+      "source_id": "src-pilot-eval",
+      "source_type": "synthetic-record",
+      "summary": "A reversible assistance-only pilot can generate evidence without automating final decisions.",
+      "supersedes": null,
+      "title": "Synthetic bounded-pilot evaluation design",
+      "version": "1.0"
+    },
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:f5515596ba2f8c45bc4f4087cfb650284c2128a7d163fa0c28823e3a09d9a22b",
+      "effective_at": null,
+      "independence_group": "community-forum",
+      "license": "CC0-1.0",
+      "lineage_id": "community-input",
+      "observed_at": "2026-05-18T10:00:00Z",
+      "published_at": "2026-05-18T09:00:00Z",
+      "publisher": "Fictional Community Forum",
+      "source_id": "src-community-input",
+      "source_type": "synthetic-record",
+      "summary": "Participants prioritize explanation, accessibility, and appeal rights.",
+      "supersedes": null,
+      "title": "Synthetic community input summary",
+      "version": "1.0"
+    },
+    {
+      "access_class": "public-synthetic",
+      "authority": "synthetic-primary",
+      "content_hash": "sha256:d995ed8461151e707eeb3b52b330b07afc3711c42fb22bebb730e9afd07b6735",
+      "effective_at": null,
+      "independence_group": "evaluation-unit",
+      "license": "CC0-1.0",
+      "lineage_id": "pilot-outcome",
+      "observed_at": "2026-08-25T10:00:00Z",
+      "published_at": "2026-08-25T09:00:00Z",
+      "publisher": "Independent Evaluation Unit",
+      "source_id": "src-pilot-outcome",
+      "source_type": "synthetic-record",
+      "summary": "The assistance-only pilot reduced wait time without removing human decisions.",
+      "supersedes": null,
+      "title": "Synthetic pilot outcome",
+      "version": "1.0"
+    }
+  ],
+  "title": "Synthetic decision on a bounded public-service assistance pilot"
+}
