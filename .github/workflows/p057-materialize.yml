@@ -109,12 +109,14 @@ jobs:
       - name: Run complete release gate
         run: python tools/release_gate.py
 
-      - name: Commit verified project
+      - name: Commit verified non-workflow project files
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf .github/workflows
+          git checkout HEAD -- .github/workflows
           git add -A
           if git diff --cached --quiet; then
             echo "No materialized source changes to commit."
