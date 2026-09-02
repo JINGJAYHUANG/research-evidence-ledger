@@ -1,0 +1,41 @@
+name: Final P057 branch cleanup
+
+on:
+  push:
+    branches:
+      - feat/p057-decision-replay-v1
+    paths:
+      - .github/workflows/cleanup-p057-final.yml
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: feat/p057-decision-replay-v1
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Remove all temporary P057 construction files and self-delete
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/THIS_SHOULD_NOT_EXIST
+          rm -f .github/PR_CONTEXT.tmp
+          rm -f .github/P057_PR_READY.md
+          rm -f .github/p057-verification-trigger.md
+          rm -rf .p057-bootstrap
+          rm -f .github/workflows/cleanup-p057-final.yml
+          rm -f .github/workflows/cleanup-p057-pr-context.yml
+          rm -f .github/workflows/cleanup-p057-pr-marker.yml
+          rm -f .github/workflows/cleanup-p057-verification.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: finalize clean P057 source tree"
+          git push origin HEAD:feat/p057-decision-replay-v1
